@@ -1,0 +1,127 @@
+@import '~normalize.css';
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background: #cecee2;
+}
+
+body {
+  font-family: "Inter UI","SF Pro Display",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu, Cantarell,"Open Sans","Helvetica Neue",sans-serif;;
+}
+
+.container {
+  width: 990px;
+  margin: 0 auto;
+  border: 1px solid transparent;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 50px;
+  padding-top: 150px;
+  min-height: 100vh;
+
+  &__content {
+    margin-top: 200px;
+  }
+
+  &__introduce {
+    color: #272d63;
+    animation-duration: 1.5s;
+    animation-delay: 0s;
+    transition-timing-function: ease-out;
+    animation-name: animate-introduce;
+    animation-fill-mode: both;
+    font-size: 40px;
+    margin-bottom: 24px;
+    font-weight: bold;
+  }
+
+  &__paragraph {
+    color: #272d63;
+    font-size: 20px;
+    line-height: 25px;
+    animation-duration: 1.5s;
+    animation-delay: 0s;
+    transition-timing-function: ease-out;
+    animation-name: animate-subtext;
+    animation-fill-mode: both;
+    margin: 0;
+    font-weight: 400;
+  }
+}
+
+.content {
+  width: 990px;
+  margin: 0 auto;
+  height: 400px;
+  z-index: 1;
+
+  .input {
+    width: 100%;
+  }
+}
+
+.sigma-ergonaut {
+  width: 450px;
+  height: 490px;
+  animation: animate-ergonaut 1.5s ease-out 0.25s both , animate-ergonaut-plane infinite ease-out 1.75s alternate ;
+}
+
+@keyframes animate-introduce {
+  0% {
+    opacity: 0;
+    transform: translate(0px,0px);
+    letter-spacing: 0.5vw;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0,0);
+    letter-spacing: 0.3vw;
+  }
+}
+
+@keyframes animate-subtext {
+  0% {
+    opacity: 0;
+    transform: translate(0px,0px);
+    letter-spacing: 0.1vw;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0,0);
+    letter-spacing: 0vw;
+  }
+}
+
+@keyframes animate-ergonaut {
+  0% {
+    opacity: 0;
+    transform: translate(0px,-10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0,0);
+  }
+}
+
+@keyframes animate-ergonaut-plane {
+  0% {
+    transform: translate(0px,-10px);
+  }
+
+  100% {
+    transform: translate(0,10px);
+  }
+}
