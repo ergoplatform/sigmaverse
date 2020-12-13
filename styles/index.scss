@@ -128,6 +128,7 @@ body {
 .dapps-card {
   width: 100%;
   border-radius: 15px;
+  text-decoration: none !important;
 
   &__preview {
     width: 100%;
@@ -151,6 +152,7 @@ body {
     grid-gap: 8px;
     align-items: center;
     margin-top: 8px;
+    color: black !important;
   }
 
   &__description {

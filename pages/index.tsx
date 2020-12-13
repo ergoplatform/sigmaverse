@@ -73,8 +73,8 @@ export default function IndexPage({ applications }: any) {
       </div>
       <div className="dapps">
         <div className="dapps__content">
-          {data.map(({ logo, preview, name, description }: any) => (
-            <div key={logo} className="dapps-card">
+          {data.map(({ logo, preview, name, description, website }: any) => (
+            <a key={logo} href={website} target="_blank" className="dapps-card">
               <img src={preview} alt={`${name} preview`} className="dapps-card__preview" />
               <div className="dapps-card__content">
                 <div className="dapps-card__header">
@@ -83,7 +83,7 @@ export default function IndexPage({ applications }: any) {
                 </div>
                 <p className="dapps-card__description">{description}</p>
               </div>
-            </div>
+            </a>
           ))}
         </div>
       </div>
