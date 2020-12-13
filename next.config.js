@@ -6,6 +6,7 @@ const withSourceMaps = require('@zeit/next-source-maps')({
 const path = require('path');
 
 const nextConfig = {
+  assetPrefix: process.env.BASE_PATH || '/sigmaverse',
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles')],
   },
