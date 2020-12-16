@@ -1,8 +1,8 @@
 ---
-name: 'Oracle Core'
-description: 'The oracle core is the off-chain component that oracles who are part of an oracle pool run. This oracle core provides a HTTP API interface for reading the current protocol state & another for submitting datapoints. Once a datapoint is submited, the oracle core will automatically generate the required tx and post it as well as any other actions required for the protocol to run. This thereby allows the oracle to participate in the oracle pool protocol without any extra effort for the oracle operator.'
-website: 'https://github.com/ergoplatform/oracle-core/'
+name: 'Oracle Pools'
+description: 'Oracle Pools are a decentralized approach to the Oracle problem with game theoretic incentives baked in to ensure accurate delivery of data to the on-chain world. Ergo Oracle Pools are live and available for use for any DeFi dApp you create with no upfront cost.'
+website: 'https://explorer.ergoplatform.com/en/oracle-pools-list'
 logo_image: 'ergo-logo.png'
 preview_image: 'oracle-pools.png'
-appCategory: ['cli']
+appCategory: ['web']
 ---

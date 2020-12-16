@@ -74,7 +74,7 @@ export default function IndexPage({ applications }: any) {
       <div className="dapps">
         <div className="dapps__content">
           {data.map(({ logo, preview, name, description, website }: any) => (
-            <a key={logo} href={website} target="_blank" className="dapps-card">
+            <a key={website} href={website} target="_blank" className="dapps-card">
               <img src={preview} alt={`${name} preview`} className="dapps-card__preview" />
               <div className="dapps-card__content">
                 <div className="dapps-card__header">
