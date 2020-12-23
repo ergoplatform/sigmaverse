@@ -32,12 +32,15 @@ export default function IndexPage({ applications }: any) {
           <ul className="navigation-list">
             <li className="navigation-list__item">
               <a href="https://github.com/ergoplatform/sigmaverse" target="_blank">
-                Add dApp
+                Add New DApp
               </a>
             </li>
             <li className="navigation-list__item">
-              <a href="https://ergoplatform.org/en/" target="_blank">
-                Ergo Website
+              <a
+                href="https://ergoplatform.org/en/blog/2020-12-08-ergo-headless-dapp-framework-now-available/"
+                target="_blank"
+              >
+                DApp Framework
               </a>
             </li>
           </ul>
