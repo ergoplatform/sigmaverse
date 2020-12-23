@@ -24,6 +24,25 @@ export default function IndexPage({ applications }: any) {
   const data = searchedValue ? searchedApplications : applications;
   return (
     <div>
+      <header>
+        <nav className="navigation">
+          <div className="logotype">
+            <img src="/images/logo_original.svg" alt="Logotype" />
+          </div>
+          <ul className="navigation-list">
+            <li className="navigation-list__item">
+              <a href="https://github.com/ergoplatform/sigmaverse" target="_blank">
+                Add dApp
+              </a>
+            </li>
+            <li className="navigation-list__item">
+              <a href="https://ergoplatform.org/en/" target="_blank">
+                Ergo Website
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </header>
       <div className="container">
         <div className="header">
           <div className="header__content">
@@ -37,7 +56,7 @@ export default function IndexPage({ applications }: any) {
               >
                 Ergo
               </a>{' '}
-              dApp universe
+              universe
             </p>
           </div>
           <div>
