@@ -24,6 +24,28 @@ export default function IndexPage({ applications }: any) {
   const data = searchedValue ? searchedApplications : applications;
   return (
     <div>
+      <header>
+        <nav className="navigation">
+          <div className="logotype">
+            <img src="/images/logo_original.svg" alt="Logotype" />
+          </div>
+          <ul className="navigation-list">
+            <li className="navigation-list__item">
+              <a href="https://github.com/ergoplatform/sigmaverse" target="_blank">
+                Add New DApp
+              </a>
+            </li>
+            <li className="navigation-list__item">
+              <a
+                href="https://ergoplatform.org/en/blog/2020-12-08-ergo-headless-dapp-framework-now-available/"
+                target="_blank"
+              >
+                DApp Framework
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </header>
       <div className="container">
         <div className="header">
           <div className="header__content">
@@ -37,7 +59,7 @@ export default function IndexPage({ applications }: any) {
               >
                 Ergo
               </a>{' '}
-              dApp universe
+              universe
             </p>
           </div>
           <div>
@@ -74,7 +96,7 @@ export default function IndexPage({ applications }: any) {
       <div className="dapps">
         <div className="dapps__content">
           {data.map(({ logo, preview, name, description, website }: any) => (
-            <a key={logo} href={website} target="_blank" className="dapps-card">
+            <a key={website} href={website} target="_blank" className="dapps-card">
               <img src={preview} alt={`${name} preview`} className="dapps-card__preview" />
               <div className="dapps-card__content">
                 <div className="dapps-card__header">
