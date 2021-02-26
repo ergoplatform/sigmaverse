@@ -123,27 +123,30 @@ export const getStaticProps: GetStaticProps = async () => {
 
   const filenames = fs.readdirSync(applicationsDirectory);
 
-  const applications = filenames.map((filename) => {
-    const filePath = path.join(applicationsDirectory, filename);
-    const { data }: any = matter(fs.readFileSync(`${filePath}/overview.md`, 'utf8'));
-    const newLogoPath = `/images/applications/${data.logo_image}`;
-    const newPreviewPath = `/images/applications/${data.preview_image}`;
+  const applications = filenames
+    .filter((filename) => !filename.match('.DS_Store'))
+    .map((filename) => {
+      const filePath = path.join(applicationsDirectory, filename);
 
-    fs.copyFileSync(
-      `${filePath}/${data.logo_image}`,
-      `${applicationsImagesDirectory}/${data.logo_image}`,
-    );
-    fs.copyFileSync(
-      `${filePath}/${data.preview_image}`,
-      `${applicationsImagesDirectory}/${data.preview_image}`,
-    );
+      const { data }: any = matter(fs.readFileSync(`${filePath}/overview.md`, 'utf8'));
+      const newLogoPath = `/images/applications/${data.logo_image}`;
+      const newPreviewPath = `/images/applications/${data.preview_image}`;
 
-    return {
-      ...data,
-      logo: newLogoPath,
-      preview: newPreviewPath,
-    };
-  });
+      fs.copyFileSync(
+        `${filePath}/${data.logo_image}`,
+        `${applicationsImagesDirectory}/${data.logo_image}`,
+      );
+      fs.copyFileSync(
+        `${filePath}/${data.preview_image}`,
+        `${applicationsImagesDirectory}/${data.preview_image}`,
+      );
+
+      return {
+        ...data,
+        logo: newLogoPath,
+        preview: newPreviewPath,
+      };
+    });
 
   return {
     props: {
