@@ -10,6 +10,7 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
+          <title>Sigmaverse | Portal to the Ergo universe</title>
           <meta name="title" content="Sigmaverse - explore dapps in the ergo ecosystem." />
           <meta
             name="description"
