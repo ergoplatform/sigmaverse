@@ -4,6 +4,16 @@ import fs from 'fs';
 import path from 'path';
 import { useState, useMemo } from 'react';
 import Fuse from 'fuse.js';
+import Dex from '../out/components/categories/dex';
+import Dapps from '../out/components/categories/dapps';
+import Tokens from '../out/components/categories/Tokens';
+import Nft from '../out/components/categories/nft';
+import InProgress from '../out/components/categories/inprogress';
+import Faucet from '../out/components/categories/faucets';
+import Wallets from '../out/components/categories/wallets';
+import Mining from '../out/components/categories/mining';
+import Utilities from '../out/components/categories/utilities';
+import Oracle from '../out/components/categories/oracle';
 
 const fuseOptions = {
   shouldSort: true,
@@ -22,6 +32,7 @@ export default function IndexPage({ applications }: any) {
     fuse,
   ]);
   const data = searchedValue ? searchedApplications : applications;
+
   return (
     <div>
       <header>
@@ -94,20 +105,17 @@ export default function IndexPage({ applications }: any) {
         </div>
       </div>
       <div className="dapps">
-        <div className="dapps__content">
-          {data.map(({ logo, preview, name, description, website }: any) => (
-            <a key={website} href={website} target="_blank" className="dapps-card">
-              <img src={preview} alt={`${name} preview`} className="dapps-card__preview" />
-              <div className="dapps-card__content">
-                <div className="dapps-card__header">
-                  <img src={logo} alt={`${name} logotype`} className="dapps-card__logotype" />{' '}
-                  {name}
-                </div>
-                <p className="dapps-card__description">{description}</p>
-              </div>
-            </a>
-          ))}
-        </div>
+        <Dapps data={data} />
+        <Tokens data={data} />
+        <Nft data={data} />
+        <Dex data={data} />
+        <Utilities data={data} />
+        <Wallets data={data} />
+        <Mining data={data} />
+        <Oracle data={data} />
+        <Faucet data={data} />
+
+        <InProgress data={data} />
       </div>
     </div>
   );
@@ -129,6 +137,7 @@ export const getStaticProps: GetStaticProps = async () => {
       const filePath = path.join(applicationsDirectory, filename);
 
       const { data }: any = matter(fs.readFileSync(`${filePath}/overview.md`, 'utf8'));
+
       const newLogoPath = `/images/applications/${data.logo_image}`;
       const newPreviewPath = `/images/applications/${data.preview_image}`;
 
@@ -154,3 +163,14 @@ export const getStaticProps: GetStaticProps = async () => {
     },
   };
 };
+
+// dapps
+// utilities
+// Oracle
+// mining
+// NFT projects
+// token projects
+// wallets
+// Work in Progress projects
+// DEX
+// faucet

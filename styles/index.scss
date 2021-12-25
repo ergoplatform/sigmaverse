@@ -163,21 +163,45 @@ header {
   margin-top: 60px;
 
   &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     max-width: 990px;
     margin: 0 auto;
     min-height: 400px;
     z-index: 5;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, 300px);
-    grid-gap: 32px;
+
+    
+  }
+  &__container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    column-gap: 30px;
+    row-gap: 30px;
+
+  }
+  &__title {
+    margin-top: 20px;
+    font-size: 30px;
+    font-weight: 700;
+    height: 50px;
+    margin-bottom: 10px;
+    color:rgb(88 102 126);
   }
 }
 
 .dapps-card {
-  width: 100%;
+  width: 300px;
   border-radius: 15px;
+  box-shadow: 0 4px 8px 0 rgb(166 176 195), 0 6px 20px 0 rgb(166 176 195);
   text-decoration: none !important;
+  &:hover{
+    transform: scaleY(1.1);
 
+
+  }
   &__preview {
     width: 100%;
     max-height: 222px;
@@ -187,6 +211,7 @@ header {
   &__logotype {
     width: 24px;
     height: 24px;
+    margin-right: 5px;
   }
 
   &__content {
@@ -195,17 +220,18 @@ header {
   }
 
   &__header {
-    display: grid;
-    grid-template-columns: 24px 1fr;
-    grid-gap: 8px;
+    flex-basis: 30%;
+    display: flex;
+    justify-content: center;
     align-items: center;
-    margin-top: 8px;
     color: black !important;
   }
 
   &__description {
-    margin-top: 8px;
     color: #6e6d7a;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align:justify;
     font-size: 14px;
     font-weight: 400;
     line-height: 20px;

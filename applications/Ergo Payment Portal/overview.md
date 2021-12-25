@@ -5,4 +5,5 @@ website: 'https://paymentportal.ergo.ga/about.html'
 logo_image: 'ergopaymentportal-logo.png'
 preview_image: 'ergopaymentportal-preview.png'
 appCategory: ['web']
+category: 'dapps'
 ---

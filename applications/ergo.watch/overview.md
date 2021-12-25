@@ -5,4 +5,5 @@ website: 'https://ergo.watch/'
 logo_image: 'ergo-logo.png'
 preview_image: 'ergo-watch.png'
 appCategory: ['web']
+category: 'utilities'
 ---
