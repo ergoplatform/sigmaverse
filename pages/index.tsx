@@ -4,16 +4,16 @@ import fs from 'fs';
 import path from 'path';
 import { useState, useMemo } from 'react';
 import Fuse from 'fuse.js';
-import Dex from '../out/components/categories/dex';
-import Dapps from '../out/components/categories/dapps';
-import Tokens from '../out/components/categories/Tokens';
-import Nft from '../out/components/categories/nft';
-import InProgress from '../out/components/categories/inprogress';
-import Faucet from '../out/components/categories/faucets';
-import Wallets from '../out/components/categories/wallets';
-import Mining from '../out/components/categories/mining';
-import Utilities from '../out/components/categories/utilities';
-import Oracle from '../out/components/categories/oracle';
+import Dex from '../components/categories/dex';
+import Dapps from '../components/categories/dapps';
+import Tokens from '../components/categories/Tokens';
+import Nft from '../components/categories/nft';
+import InProgress from '../components/categories/inprogress';
+import Faucet from '../components/categories/faucets';
+import Wallets from '../components/categories/wallets';
+import Mining from '../components/categories/mining';
+import Utilities from '../components/categories/utilities';
+import Oracle from '../components/categories/oracle';
 
 const fuseOptions = {
   shouldSort: true,
