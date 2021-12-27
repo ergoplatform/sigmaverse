@@ -1,8 +1,8 @@
 import React from 'react';
 
-export default function Tokens({ data }: any) {
+export default function Tokens({ data, filter }: any) {
   const token = data.filter((element: any) => element.category == 'token');
-  if (token.length != 0) {
+  if ((token.length != 0 && filter == 'Token') || filter == 'All') {
     return (
       <div className="dapps__content">
         <div className="dapps__title">Token Projects</div>

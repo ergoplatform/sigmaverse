@@ -1,8 +1,9 @@
 import React from 'react';
 
-export default function Dapps({ data }: any) {
+export default function Dapps({ data, filter }: any) {
   const dapps = data.filter((element: any) => element.category == 'dapps');
-  if (dapps.length != 0) {
+  console.log(dapps);
+  if ((dapps.length != 0 && (filter == 'Dapp') || filter == 'All')) {
     return (
       <div className="dapps__content">
         <div className="dapps__title">Decentralized Applications</div>

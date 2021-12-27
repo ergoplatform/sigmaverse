@@ -1,8 +1,8 @@
 import React from 'react';
 
-export default function Wallets({ data }: any) {
+export default function Wallets({ data, filter }: any) {
   const wallets = data.filter((element: any) => element.category == 'wallets');
-  if (wallets.length != 0) {
+  if ((wallets.length != 0 && filter == 'Wallet') || filter == 'All') {
     return (
       <div className="dapps__content">
         <div className="dapps__title">Wallets </div>

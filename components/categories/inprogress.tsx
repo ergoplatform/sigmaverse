@@ -1,8 +1,9 @@
 import React from 'react';
 
-export default function InProgress({ data }: any) {
-  const WorkInProgress = data.filter((element: any) => element.category == 'WorkInProgress');
-  if (WorkInProgress.length != 0) {
+export default function InProgress({ data, filter }: any) {
+  console.log(filter);
+  const WorkInProgress = data.filter((element: any) => element.category == 'InProgress');
+  if ((WorkInProgress.length != 0 && filter == 'inProgress') || filter == 'All') {
     return (
       <div className="dapps__content">
         <div className="dapps__title">In Progress Projects</div>

@@ -1,8 +1,8 @@
 import React from 'react';
 
-export default function Faucet({ data }: any) {
+export default function Faucet({ data, filter }: any) {
   const faucet = data.filter((element: any) => element.category == 'faucet');
-  if (faucet.length != 0) {
+  if ((faucet.length != 0 && filter == 'Faucet') || filter == 'All') {
     return (
       <div className="dapps__content">
         <div className="dapps__title">Faucets</div>

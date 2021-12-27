@@ -1,8 +1,8 @@
 import React from 'react';
 
-export default function Mining({ data }: any) {
+export default function Mining({ data, filter }: any) {
   const mining = data.filter((element: any) => element.category == 'mining');
-  if (mining.length != 0) {
+  if ((mining.length != 0 && filter == 'Mining') || filter == 'All') {
     return (
       <div className="dapps__content">
         <div className="dapps__title">Mining projects</div>

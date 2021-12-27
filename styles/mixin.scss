@@ -1,0 +1,30 @@
+@mixin scroll_button {
+    border: none;
+    background-color: white;
+    width: 35px;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 20px;
+            
+  
+}
+@mixin flex_cointainer() {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+@mixin filter_tag  {
+    justify-content: center;
+    max-width: 120px;
+    min-width: 90px;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.6;
+    margin-left: 10px;
+    border: 1px solid gray;
+    border-radius: 20px;
+    cursor: pointer;
+
+}

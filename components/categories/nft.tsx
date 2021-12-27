@@ -1,8 +1,8 @@
 import React from 'react';
 
-export default function Nft({ data }: any) {
+export default function Nft({ data, filter }: any) {
   const NFT = data.filter((element: any) => element.category == 'NFT');
-  if (NFT.length != 0) {
+  if ((NFT.length != 0 && filter == 'NFT') || filter == 'All') {
     return (
       <div className="dapps__content">
         <div className="dapps__title">NFT Projects</div>
