@@ -1,9 +1,8 @@
 import React from 'react';
 
 export default function Dex({ data, filter }: any) {
-  console.log(filter == ('DEX' || 'All'));
   const Dex = data.filter((element: any) => element.category == 'DEX');
-  if ((Dex.length != 0 && filter == 'DEX') || filter == 'All') {
+  if ((Dex.length != 0 && filter == 'DEX') || (Dex.length != 0 && filter == 'All')) {
     return (
       <div className="dapps__content">
         <div className="dapps__title">Decentralized Exchanges</div>

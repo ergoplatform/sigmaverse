@@ -2,7 +2,10 @@ import React from 'react';
 
 export default function Utilities({ data, filter }: any) {
   const utilities = data.filter((element: any) => element.category == 'utilities');
-  if ((utilities.length != 0 && filter == 'Utility') || filter == 'All') {
+  if (
+    (utilities.length != 0 && filter == 'Utility') ||
+    (utilities.length != 0 && filter == 'All')
+  ) {
     return (
       <div className="dapps__content">
         <div className="dapps__title">Utilities </div>

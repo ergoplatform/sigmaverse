@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Mining({ data, filter }: any) {
   const mining = data.filter((element: any) => element.category == 'mining');
-  if ((mining.length != 0 && filter == 'Mining') || filter == 'All') {
+  if ((mining.length != 0 && filter == 'Mining') || (mining.length != 0 && filter == 'All')) {
     return (
       <div className="dapps__content">
         <div className="dapps__title">Mining projects</div>

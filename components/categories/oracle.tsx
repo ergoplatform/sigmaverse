@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Oracle({ data, filter }: any) {
   const oracle = data.filter((element: any) => element.category == 'oracle');
-  if ((oracle.length != 0 && filter == 'Oracle') || filter == 'All') {
+  if ((oracle.length != 0 && filter == 'Oracle') || (oracle.length != 0 && filter == 'All')) {
     return (
       <div className="dapps__content">
         <div className="dapps__title">Oracles</div>
