@@ -50,7 +50,7 @@ export default function SearchBar({ filter, setFilter, searchedValue, setSearche
           onClick={() => {
             ref.current.scrollLeft += 120;
           }}
-        ></button>
+        />
       </div>
     </div>
   );
