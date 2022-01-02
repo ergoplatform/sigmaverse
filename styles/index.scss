@@ -39,6 +39,7 @@ header {
     grid-gap: 30px;
   }
 
+
   .navigation-list {
     display: flex;
     flex-direction: row;
@@ -158,6 +159,7 @@ header {
     left: 0;
   }
 }
+ 
 .filter {
   @include flex_cointainer();
   max-width: 990px;
@@ -175,7 +177,7 @@ header {
   &__tag {
     @include flex_cointainer();
     @include filter_tag();
-    background-color :#f2f2ff;
+    background-color: #f2f2ff;
     &:hover {
       background-color: #d8d8fb;
     }
@@ -194,13 +196,15 @@ header {
  
 
 }
+ 
+ 
 
 .dapps {
   background-color: white;
   max-width: 990px;
   margin: 50px auto;
   display: grid;
-  grid-template-columns: auto auto auto ;
+  grid-template-columns: 1fr 1fr  1fr ;
   justify-content: start;
   column-gap: 40px;
   row-gap: 40px;  
@@ -208,12 +212,13 @@ header {
 }
 
 .dapps-card {
-  width: 300px;
   border-radius: 15px;
-  box-shadow: 0 4px 8px 0 rgb(166 176 195), 0 6px 20px 0 rgb(166 176 195);
   text-decoration: none !important;
+  box-shadow: 0 2px 4px 0 rgb(166 176 195), 0 3px 10px 0 rgb(166 176 195);
+  max-width: 100%;
+  
   &:hover{
-    transform: scaleY(1.02);
+    transform: scaleY(1.01);
 
   }
   &__preview {
@@ -325,14 +330,15 @@ header {
     margin-left: 32px;
     margin-right: 32px;
     max-width: 100%;
-
-    &__content {
-      grid-template-columns: 1fr 1fr;
-    }
+    column-gap: 20px;
+    row-gap: 20px;  
+    grid-template-columns: 1fr 1fr;
   }
+
 }
 
 @media (max-width: $mdBreakpoint) {
+
   header {
     .navigation {
       margin: 0 16px;
@@ -370,13 +376,11 @@ header {
   }
 
   .dapps {
+    max-width: 100%;
     margin-left: 16px;
     margin-right: 16px;
-    max-width: 100%;
     margin-bottom: 120px;
-
-    &__content {
-      grid-template-columns: 1fr;
-    }
+    grid-template-columns: 1fr;
   }
+
 }
