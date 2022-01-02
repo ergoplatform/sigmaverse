@@ -209,10 +209,11 @@ header {
 }
 
 .dapps-card {
-  border-radius: 15px;
+  border-radius: 10px;
   text-decoration: none !important;
   box-shadow: 0 2px 4px 0 rgb(166 176 195), 0 3px 10px 0 rgb(166 176 195);
   max-width: 100%;
+
   
   &:hover{
     transform: scaleY(1.01);
@@ -223,7 +224,7 @@ header {
     max-height: 200px;
     min-height: 200px;
     border-radius: 8px;
-    border:1px solid rgb(238, 238, 238)
+    border-bottom:1px solid rgb(238, 238, 238)
   }
 
   &__logotype {
