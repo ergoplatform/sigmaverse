@@ -216,7 +216,8 @@ header {
 
   
   &:hover{
-    box-shadow: -2px -2px 15px 0 rgb(166 176 195), 2px 2px 15px 0 rgb(166 176 195);
+    transform: scaleY(1.005);
+    box-shadow: -1px -2px 10px 0 rgb(166 176 195), 2px 2px 15px 0 rgb(166 176 195);
 
   }
   &__preview {
