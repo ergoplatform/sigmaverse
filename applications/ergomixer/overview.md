@@ -5,6 +5,6 @@ website: 'https://github.com/ergoMixer/ergoMixBack'
 logo_image: 'ergomixer-logotype.png'
 preview_image: 'ergomixer.jpeg'
 appCategory: ['web']
-category: 'utilities'
+category: 'Utility'
 ---
 

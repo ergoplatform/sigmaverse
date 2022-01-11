@@ -34,7 +34,7 @@ export default function SearchBar({ filter, setFilter, searchedValue, setSearche
             'Utility',
             'Mining',
             'Oracle',
-            'inProgress',
+            'InProgress',
           ].map((e) => (
             <div
               key={e}

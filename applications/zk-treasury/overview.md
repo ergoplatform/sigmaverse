@@ -5,6 +5,6 @@ website: 'https://github.com/anon-real/DistributedSigsServer'
 logo_image: 'ergo-logo.png'
 preview_image: 'zk-treasury.png'
 appCategory: ['web']
-category: 'utilities'
+category: 'Utility'
 ---
 

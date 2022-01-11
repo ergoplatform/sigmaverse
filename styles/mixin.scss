@@ -6,8 +6,7 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: 20px;
-            
-  
+    cursor: pointer;
 }
 @mixin flex_cointainer() {
     display: flex;
@@ -23,8 +22,9 @@
     font-weight: 400;
     line-height: 1.6;
     margin-left: 10px;
-    border: 1px solid gray;
     border-radius: 20px;
     cursor: pointer;
+    color: black;
+    transition: all 0.1s;
 
 }

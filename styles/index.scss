@@ -159,17 +159,17 @@ header {
     left: 0;
   }
 }
- 
+
 .filter {
   @include flex_cointainer();
   overflow: scroll;
   height: 50px;
   scroll-behavior: smooth;
-  box-shadow: 0px 8px 20px rgba(0,0,0,0.06);
- &::-webkit-scrollbar{
-   display: none;
-   scrollbar-width: 0px;
- }
+
+  &::-webkit-scrollbar{
+    display: none;
+    scrollbar-width: 0px;
+  }
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
   &__tag {
@@ -183,18 +183,15 @@ header {
    &__container{
       @include flex_cointainer();
       justify-content: space-evenly;
-      margin-top: 3px;
-      border: 1px solid ghostwhite;
+      margin-top: 20px;
     }
     &__active {
       @include flex_cointainer();
       @include filter_tag();
       color:white;
       background-color: #6b6bfd;
-
     }
-
-} 
+}
 
 .dapps {
   background-color: white;
@@ -204,28 +201,28 @@ header {
   grid-template-columns: 1fr 1fr  1fr ;
   justify-content: start;
   column-gap: 40px;
-  row-gap: 40px;  
+  row-gap: 40px;
 
 }
 
 .dapps-card {
   border-radius: 10px;
   text-decoration: none !important;
-  box-shadow: 0 2px 4px 0 rgb(166 176 195), 0 3px 10px 0 rgb(166 176 195);
+  box-shadow: 0 1px 4px 0 #dedede, 0 2px 10px 0 #f4f4f4;
   max-width: 100%;
+  transition: all 0.1s;
 
-  
+
   &:hover{
-    transform: scaleY(1.005);
-    box-shadow: -1px -2px 10px 0 rgb(166 176 195), 2px 2px 15px 0 rgb(166 176 195);
-
+    box-shadow: 0 1px 4px 0 #6b6bfd, 0 2px 10px 0 #6b6bfd;
   }
+
   &__preview {
     width: 100%;
     max-height: 200px;
     min-height: 200px;
     border-radius: 8px;
-    border-bottom:1px solid rgb(238, 238, 238)
+    border-bottom: 1px solid rgb(238, 238, 238)
   }
 
   &__logotype {
@@ -246,6 +243,7 @@ header {
     justify-content: center;
     align-items: center;
     color: black !important;
+    padding-top: 5px;
   }
 
   &__description {
@@ -256,7 +254,7 @@ header {
     font-size: 14px;
     font-weight: 400;
     line-height: 20px;
-  } 
+  }
 }
 
 .sigma-ergonaut {
@@ -333,7 +331,7 @@ header {
     margin-right: 32px;
     max-width: 100%;
     column-gap: 20px;
-    row-gap: 20px;  
+    row-gap: 20px;
     grid-template-columns: 1fr 1fr;
   }
 

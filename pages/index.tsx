@@ -49,15 +49,6 @@ export default function IndexPage({ applications }: any) {
       />
       <div className="dapps">
         <Dapps data={data} filter={filter} />
-        <Tokens data={data} filter={filter} />
-        <Nft data={data} filter={filter} />
-        <Dex data={data} filter={filter} />
-        <Utilities data={data} filter={filter} />
-        <Wallets data={data} filter={filter} />
-        <Mining data={data} filter={filter} />
-        <Oracle data={data} filter={filter} />
-        <Faucet data={data} filter={filter} />
-        <InProgress data={data} filter={filter} />
       </div>
     </div>
   );

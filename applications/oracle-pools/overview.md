@@ -5,5 +5,5 @@ website: 'https://explorer.ergoplatform.com/en/oracle-pools-list'
 logo_image: 'ergo-logo.png'
 preview_image: 'oracle-pools.png'
 appCategory: ['web']
-category: 'oracle'
+category: 'Oracle'
 ---
