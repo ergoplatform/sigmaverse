@@ -30,7 +30,7 @@ export default function SearchBar({ filter, setFilter, searchedValue, setSearche
             'Privacy',           
             'NFTs',
             'Metaverse',
-            'Wallets',
+            'Learn',
             'Mining',
             'Utilities',            
             'Tooling',
