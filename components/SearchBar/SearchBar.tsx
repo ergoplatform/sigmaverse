@@ -29,6 +29,7 @@ export default function SearchBar({ filter, setFilter, searchedValue, setSearche
             'dApps',
             'Privacy',           
             'NFTs',
+            'Metaverse',
             'Wallets',
             'Mining',
             'Utilities',            
