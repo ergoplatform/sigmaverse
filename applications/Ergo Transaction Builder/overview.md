@@ -5,6 +5,6 @@ website: 'https://transaction-builder.ergo.ga/'
 logo_image: 'transaction-builder-logo.png'
 preview_image: 'transaction-builder-preview.png'
 appCategory: ['web']
-category: 'Utilities'
+category: 'Tooling'
 
 ---
