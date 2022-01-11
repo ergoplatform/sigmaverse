@@ -5,4 +5,5 @@ website: 'https://enigmapool.com/'
 logo_image: 'ergo-logo.png'
 preview_image: 'enigmapool-preview.png'
 appCategory: ['web']
+category: 'Mining'
 ---

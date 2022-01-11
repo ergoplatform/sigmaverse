@@ -5,4 +5,5 @@ website: 'https://ergonfts.org/'
 logo_image: 'ergo-logo.png'
 preview_image: 'ergonfts.png'
 appCategory: ['web']
+category: 'NFT'
 ---

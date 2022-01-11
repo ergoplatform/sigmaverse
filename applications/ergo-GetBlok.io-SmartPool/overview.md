@@ -5,4 +5,5 @@ website: 'https://ergo.getblok.io'
 logo_image: 'GetBlok_io_Logo.png'
 preview_image: 'GetBlok_io_Preview.png'
 appCategory: ['web']
+category: 'Mining'
 ---

@@ -5,4 +5,6 @@ website: 'https://ergoauctions.org/'
 logo_image: 'ergo-logo.png'
 preview_image: 'ergoauctions.png'
 appCategory: ['web']
+category: 'Dapp'
 ---
+

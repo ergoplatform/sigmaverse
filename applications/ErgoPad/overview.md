@@ -5,4 +5,5 @@ website: 'https://ergopad.io/'
 logo_image: 'ergopad-logo.png'
 preview_image: 'ergopad-preview.png'
 appCategory: ['web']
+category: 'Utility'
 ---

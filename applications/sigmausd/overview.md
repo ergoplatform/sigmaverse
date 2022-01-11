@@ -5,4 +5,5 @@ website: https://sigmausd.io
 logo_image: 'ergo-logo.png'
 preview_image: 'sigmausd.png'
 appCategory: ["web"]
+category: 'Token'
 ---

@@ -1,0 +1,11 @@
+ @import 'mixin.scss';
+.right_button{
+    @include scroll_button();
+    background-image: url(../static/leftArrow.svg);
+
+}
+.left_button{
+    @include scroll_button();
+    background-image: url(../static/rightArrow.svg);
+
+}
