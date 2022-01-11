@@ -5,5 +5,5 @@ website: 'http://ergo-status.net/'
 logo_image: 'ergo-logo.png'
 preview_image: 'ergo-status.png'
 appCategory: ['web']
-category: 'Utilities'
+category: 'Tooling'
 ---

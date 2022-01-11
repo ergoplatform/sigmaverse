@@ -5,5 +5,5 @@ website: 'https://ergotutorials.com/'
 logo_image: 'ErgoTutorials-logo.png'
 preview_image: 'ErgoTutorials-preview.png'
 appCategory: ['web']
-category: 'Learn'
+category: 'Explore'
 ---
