@@ -5,7 +5,7 @@ let cache: any = null;
 
 export default function Dapps({ data, filter }: any) {
   if (data.length === 0) {
-    return 'Dapps not found';
+    return <>Dapps not found</>;
   }
 
   if (cache === null) {

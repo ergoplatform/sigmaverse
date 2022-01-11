@@ -4,16 +4,7 @@ import fs from 'fs';
 import path from 'path';
 import { useState, useMemo } from 'react';
 import Fuse from 'fuse.js';
-import Dex from '../components/categories/dex';
 import Dapps from '../components/categories/dapps';
-import Tokens from '../components/categories/Tokens';
-import Nft from '../components/categories/nft';
-import InProgress from '../components/categories/inprogress';
-import Faucet from '../components/categories/faucets';
-import Wallets from '../components/categories/wallets';
-import Mining from '../components/categories/mining';
-import Utilities from '../components/categories/utilities';
-import Oracle from '../components/categories/oracle';
 import SearchBar from '../components/SearchBar/SearchBar';
 import Header from '../components/Header/Header';
 
