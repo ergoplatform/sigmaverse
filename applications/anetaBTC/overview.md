@@ -5,6 +5,6 @@ website: 'https://www.anetabtc.io/'
 logo_image: 'anetabtc-logo.png'
 preview_image: 'anetabtc-preview.png'
 appCategory: ['web']
-category: 'Token'
+category: 'dApps'
 ---
 

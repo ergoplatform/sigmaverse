@@ -6,5 +6,5 @@ website: 'https://www.spacefarmers.shop/'
 logo_image: 'spacefarmers-logo.png'
 preview_image: 'spacefarmers-preview.png'
 appCategory: ['web']
-category: 'NFT'
+category: 'NFTs'
 ---

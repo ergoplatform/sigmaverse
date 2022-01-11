@@ -5,6 +5,6 @@ website: 'https://ergosaurs.io/'
 logo_image: 'ergosaurs-logo.png'
 preview_image: 'ergosaurs.png'
 appCategory: ['web']
-category: 'NFT'
+category: 'NFTs'
 ---
 
