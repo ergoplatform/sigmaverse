@@ -5,5 +5,5 @@ website: 'https://ergodex.io/'
 logo_image: 'ergodex-logo.png'
 preview_image: 'ergodex.png'
 appCategory: ['web']
-category: 'DEX'
+category: 'dApps'
 ---

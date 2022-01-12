@@ -5,5 +5,5 @@ website: 'https://ergnomes.io/'
 logo_image: 'ergnomes-logo.png'
 preview_image: 'ergnomes.png'
 appCategory: ['web']
-category: 'NFT'
+category: 'NFTs'
 ---

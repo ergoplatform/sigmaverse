@@ -5,4 +5,5 @@ website: 'https://ab6x.com/'
 logo_image: 'ergo-logo.png'
 preview_image: 'ab6x-preview.png'
 appCategory: ['web']
+category: 'NFTs'
 ---

@@ -5,6 +5,6 @@ website: 'https://ergofaucet.org/'
 logo_image: 'ergo-logo.png'
 preview_image: 'ergofaucet.png'
 appCategory: ['web']
-category: 'Faucet'
+category: 'Utilities'
 ---
 

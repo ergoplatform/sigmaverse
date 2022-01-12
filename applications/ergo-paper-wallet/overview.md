@@ -5,5 +5,5 @@ website: 'https://ergopaperwallet.org/'
 logo_image: 'ergo-logo.png'
 preview_image: 'ergopaperwallet.png'
 appCategory: ['web']
-category: 'Wallet'
+category: 'Tooling'
 ---

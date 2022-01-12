@@ -5,5 +5,5 @@ website: 'https://tokenminter.ergo.ga/'
 logo_image: 'ergo-logo.png'
 preview_image: 'ergotokenminter.png'
 appCategory: ['web']
-category: 'Dapp'
+category: 'Tokens'
 ---

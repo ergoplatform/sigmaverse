@@ -26,15 +26,15 @@ export default function SearchBar({ filter, setFilter, searchedValue, setSearche
         <div className="filter" ref={ref}>
           {[
             'All',
-            'Dapp',
-            'Token',
-            'NFT',
-            'Wallet',
-            'DEX',
-            'Utility',
+            'dApps',
+            'Privacy',           
+            'NFTs',
+            'Metaverse',
+            'Explore',
             'Mining',
-            'Oracle',
-            'InProgress',
+            'Tooling',
+            'Tokens',
+            
           ].map((e) => (
             <div
               key={e}

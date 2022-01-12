@@ -5,6 +5,6 @@ website: 'https://ergozx.com/'
 logo_image: 'ergozx-logo.png'
 preview_image: 'ergozx-preview.png'
 appCategory: ['web']
-category: 'NFT'
+category: 'NFTs'
 ---
 

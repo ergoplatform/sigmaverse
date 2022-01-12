@@ -5,5 +5,5 @@ website: 'https://ergotokens.org/'
 logo_image: 'ergo-logo.png'
 preview_image: 'ergotokens.png'
 appCategory: ['web']
-category: 'Token'
+category: 'Tokens'
 ---
