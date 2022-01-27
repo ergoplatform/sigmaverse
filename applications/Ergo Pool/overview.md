@@ -5,5 +5,5 @@ website: 'https://ergo-pool.com/home'
 logo_image: 'ergopool-logo.png'
 preview_image: 'ergopool-preview.png'
 appCategory: ['web']
-category: 'Mining'
+category: 'Tooling'
 ---
