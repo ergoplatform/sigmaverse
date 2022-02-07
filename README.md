@@ -16,10 +16,10 @@ To include your dApp in Sigmaverse, create a new folder in applications/{dAppNam
 ```
 ------
 name: name of dApp
-description: description of dApp
+description: description of dApp (max 284 characters leghth, or part of the text won't appear)
 website: dApp website
-logo_image: “{logotypeName}” – if you want to include this, save the image at applications/{dAppName}/{logotypeName}
-preview_image: “{previewName}” – if you want to include this, save the image at applications/{dAppName}/{previewName}
+logo_image: “{logotypeName}” – if you want to include this, save the image at applications/{dAppName}/{logotypeName} ##Logo Specifications: square with transparent backgrounds, objects as close to image boundaries as possible, clear and legible at a small size
+preview_image: “{previewName}” – if you want to include this, save the image at applications/{dAppName}/{previewName} ##Image Specifications: 2:3 height to width ratio to avoid distortions
 appCategory: [“web” or/and “cli” or/and “desktop”]
 category: 'dApps' 
 ------
