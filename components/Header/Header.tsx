@@ -11,7 +11,7 @@ export default function Header() {
           <ul className="navigation-list">
             <li className="navigation-list__item">
               <a href="https://github.com/ergoplatform/sigmaverse" target="_blank">
-                Add New DApp
+                Add New Project
               </a>
             </li>
             <li className="navigation-list__item">
