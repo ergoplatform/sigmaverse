@@ -13,7 +13,7 @@ export default function SearchBar({ filter, setFilter, searchedValue, setSearche
           value={searchedValue}
           className="search__input"
           type="text"
-          placeholder="Search for dApps..."
+          placeholder="Search for Projects.."
         />
       </div>
       <div className="filter__container">
