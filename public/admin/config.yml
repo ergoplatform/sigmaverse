@@ -5,7 +5,7 @@ backend:
   base_url: https://sigmaverse.io
 
 publish_mode: editorial_workflow
-media_folder: "static/img/uploads" # Media files will be stored in the repo under static/images/uploads
+media_folder: "static" # Media files will be stored in the repo under static/images/uploads
 public_folder: "/images/uploads" # The src attribute for uploaded media will begin with /images/uploads
 
 
