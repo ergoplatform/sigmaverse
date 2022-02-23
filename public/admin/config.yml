@@ -13,7 +13,7 @@ collections:
     label: 'Project'
     description: "All sigmaverse projects"
     folder: 'applications/'
-    path: '{{slug}}/overview'
+    path: '{{fields.name}}/overview'
     media_folder: ''
     public_folder: ''
     create: true
