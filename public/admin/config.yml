@@ -9,17 +9,53 @@ media_folder: "static/img/uploads" # Media files will be stored in the repo unde
 public_folder: "/img/uploads" # The src attribute for uploaded media will begin with /images/uploads
 
 collections:
-  - name: 'en_blog'
-    label: 'English blog post'
+  - name: 'new project'
+    label: 'Project'
     folder: 'applications/'
     path: '{{slug}}/overview'
     media_folder: ''
     public_folder: ''
     create: true
     fields:
-      - label: Title
-        name: title
-        widget: string
-      - label: 'Cover Image'
-        name: 'image'
-        widget: 'image'
+      - {
+        label: "Name",
+        name: "name",
+        widget: "text"
+      }
+      - {
+        label: "Description",
+        name: "description",
+        widget: "text"
+      }
+      - {
+        label: "Website",
+        name: "website",
+        widget: "text"
+      }
+      - {
+        label: "Logotype",
+        name: "logo_image",
+        widget: "image",
+        media_folder: '/'
+      }
+      - {
+        label: "Preview",
+        name: "preview_image",
+        widget: "image",
+        media_folder: '/'
+      }
+      - {
+        label: "Preview",
+        name: "preview_image",
+        widget: "image",
+        media_folder: '/'
+      }
+      - {
+        label: "Tags",
+        name: "tags",
+        widget: "select",
+        multiple: false,
+        options: ["Design", "UX", "Dev"],
+        default: ["Design"]
+      }
+
