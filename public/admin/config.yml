@@ -35,18 +35,18 @@ collections:
         name: "website",
         widget: "text"
       }
-      # - {
-      #   label: "Logotype",
-      #   name: "logo_image",
-      #   widget: "image",
-      #   media_folder: '/'
-      # }
-      # - {
-      #   label: "Preview",
-      #   name: "preview_image",
-      #   widget: "image",
-      #   media_folder: '/'
-      # }
+      - {
+        label: "Logotype",
+        name: "logo_image",
+        widget: "image",
+        media_folder: '/'
+      }
+      - {
+        label: "Preview",
+        name: "preview_image",
+        widget: "image",
+        media_folder: '/'
+      }
       - {
         label: "Category",
         name: "category",
