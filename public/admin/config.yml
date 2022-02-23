@@ -5,13 +5,15 @@ backend:
   base_url: https://sigmaverse.io
 
 publish_mode: editorial_workflow
-media_folder: "/" # Media files will be stored in the repo under static/images/uploads
+media_folder: "static/img/uploads" # Media files will be stored in the repo under static/images/uploads
+public_folder: "/images/uploads" # The src attribute for uploaded media will begin with /images/uploads
+
 
 collections:
   - name: 'new project'
     label: 'Project'
     description: "All sigmaverse projects"
-    folder: 'applications/'
+    folder: 'applications'
     path: '{{slug}}/overview'
     media_folder: ''
     public_folder: ''
@@ -33,18 +35,18 @@ collections:
         name: "website",
         widget: "text"
       }
-      - {
-        label: "Logotype",
-        name: "logo_image",
-        widget: "image",
-        media_folder: '/'
-      }
-      - {
-        label: "Preview",
-        name: "preview_image",
-        widget: "image",
-        media_folder: '/'
-      }
+      # - {
+      #   label: "Logotype",
+      #   name: "logo_image",
+      #   widget: "image",
+      #   media_folder: '/'
+      # }
+      # - {
+      #   label: "Preview",
+      #   name: "preview_image",
+      #   widget: "image",
+      #   media_folder: '/'
+      # }
       - {
         label: "Category",
         name: "category",
