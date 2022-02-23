@@ -39,20 +39,18 @@ collections:
         label: "Logotype",
         name: "logo_image",
         widget: "image",
-        media_folder: '/'
       }
       - {
         label: "Preview",
         name: "preview_image",
         widget: "image",
-        media_folder: '/'
       }
-      - {
-        label: "Category",
-        name: "category",
-        widget: "select",
-        multiple: false,
-        options: ["Design", "UX", "Dev"],
-        default: ["Design"]
-      }
+      # - {
+      #   label: "Category",
+      #   name: "category",
+      #   widget: "select",
+      #   multiple: false,
+      #   options: ["Design", "UX", "Dev"],
+      #   default: ["Design"]
+      # }
 
