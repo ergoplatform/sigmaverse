@@ -17,6 +17,7 @@ collections:
     public_folder: ''
     create: true
     fields:
+      - category
       - {
         label: "Name",
         name: "name",
@@ -45,14 +46,8 @@ collections:
         media_folder: '/'
       }
       - {
-        label: "Preview",
-        name: "preview_image",
-        widget: "image",
-        media_folder: '/'
-      }
-      - {
-        label: "Tags",
-        name: "tags",
+        label: "Category",
+        name: "category",
         widget: "select",
         multiple: false,
         options: ["Design", "UX", "Dev"],
