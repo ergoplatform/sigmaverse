@@ -17,7 +17,6 @@ collections:
     public_folder: ''
     create: true
     fields:
-      - category
       - {
         label: "Name",
         name: "name",
