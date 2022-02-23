@@ -11,11 +11,13 @@ public_folder: "/img/uploads" # The src attribute for uploaded media will begin 
 collections:
   - name: 'new project'
     label: 'Project'
+    description: "All sigmaverse projects"
     folder: 'applications/'
     path: '{{slug}}/overview'
     media_folder: ''
     public_folder: ''
     create: true
+    identifier_field: name
     fields:
       - {
         label: "Name",
