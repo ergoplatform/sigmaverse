@@ -12,7 +12,7 @@ collections:
     label: 'Project'
     description: "All sigmaverse projects"
     folder: 'applications/'
-    slug: '{{fields.name}}/overview'
+    path: '{{slug}}/overview'
     media_folder: ''
     public_folder: ''
     create: true
@@ -33,18 +33,18 @@ collections:
         name: "website",
         widget: "text"
       }
-      # - {
-      #   label: "Logotype",
-      #   name: "logo_image",
-      #   widget: "image",
-      #   media_folder: '/'
-      # }
-      # - {
-      #   label: "Preview",
-      #   name: "preview_image",
-      #   widget: "image",
-      #   media_folder: '/'
-      # }
+      - {
+        label: "Logotype",
+        name: "logo_image",
+        widget: "image",
+        media_folder: '/'
+      }
+      - {
+        label: "Preview",
+        name: "preview_image",
+        widget: "image",
+        media_folder: '/'
+      }
       - {
         label: "Category",
         name: "category",
