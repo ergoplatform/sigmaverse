@@ -1,6 +1,6 @@
 backend:
   name: github
-  branch: main # Branch to update (optional; defaults to master)
+  branch: master # Branch to update (optional; defaults to master)
   repo: ergoplatform/sigmaverse
   base_url: https://sigmaverse.io
 
