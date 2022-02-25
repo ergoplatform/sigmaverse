@@ -27,14 +27,13 @@ export default function SearchBar({ filter, setFilter, searchedValue, setSearche
           {[
             'All',
             'dApps',
-            'Privacy',           
+            'Privacy',
             'NFTs',
             'Metaverse',
             'Explore',
             'Mining',
             'Tooling',
             'Tokens',
-            
           ].map((e) => (
             <div
               key={e}

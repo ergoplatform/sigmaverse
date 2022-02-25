@@ -1,12 +1,12 @@
 backend:
   name: github
-  branch: main # Branch to update (optional; defaults to master)
+  branch: master # Branch to update (optional; defaults to master)
   repo: ergoplatform/sigmaverse
   base_url: https://sigmaverse.io
 
 publish_mode: editorial_workflow
 media_folder: "static" # Media files will be stored in the repo under static/images/uploads
-public_folder: "/images/uploads" # The src attribute for uploaded media will begin with /images/uploads
+public_folder: "/images" # The src attribute for uploaded media will begin with /images/uploads
 
 
 collections:
@@ -15,8 +15,6 @@ collections:
     description: "All sigmaverse projects"
     folder: 'applications'
     path: '{{slug}}/overview'
-    media_folder: '/'
-    public_folder: '/'
     create: true
     identifier_field: name
     fields:
@@ -45,12 +43,11 @@ collections:
         name: "preview_image",
         widget: "image",
       }
-      # - {
-      #   label: "Category",
-      #   name: "category",
-      #   widget: "select",
-      #   multiple: false,
-      #   options: ["Design", "UX", "Dev"],
-      #   default: ["Design"]
-      # }
+      - {
+        label: "Category",
+        name: "category",
+        widget: "select",
+        multiple: false,
+        options: ['dApps', 'Privacy', 'NFTs', 'Metaverse', 'Explore', 'Mining', 'Tooling', 'Tokens'],
+      }
 
