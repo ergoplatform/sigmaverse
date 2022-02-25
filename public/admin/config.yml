@@ -15,8 +15,6 @@ collections:
     description: "All sigmaverse projects"
     folder: 'applications'
     path: '{{slug}}/overview'
-    media_folder: '/'
-    public_folder: '/'
     create: true
     identifier_field: name
     fields:
