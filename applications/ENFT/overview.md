@@ -5,5 +5,5 @@ website: 'https://enft.so/'
 logo_image: 'ENFT-logo.jpg'
 preview_image: 'ENFT-preview.png'
 appCategory: ['web']
-category: 'NFT'
+category: 'NFTs'
 ---

@@ -5,5 +5,5 @@ website: 'https://ergkleure.com/'
 logo_image: 'ERGkleure-logo.png'
 preview_image: 'ERGkleure-preview.png'
 appCategory: ['web']
-category: 'NFT'
+category: 'NFTs'
 ---
