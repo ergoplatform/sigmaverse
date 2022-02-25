@@ -25,6 +25,10 @@ category: 'dApps'
 ------
 ```
 
+## Categories
+
+['dApps', 'Privacy', 'NFTs', 'Metaverse', 'Explore', 'Mining', 'Tooling', 'Tokens']
+
 
 ## Getting started
 
