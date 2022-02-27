@@ -34,6 +34,7 @@ export default function SearchBar({ filter, setFilter, searchedValue, setSearche
             'Mining',
             'Tooling',
             'Tokens',
+            'Wallets',
           ].map((e) => (
             <div
               key={e}
