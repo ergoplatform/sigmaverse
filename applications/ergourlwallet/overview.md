@@ -5,5 +5,5 @@ website: 'https://erg.urlwallet.org/'
 logo_image: 'ergo-logo.png'
 preview_image: 'ergourlwallet.png'
 appCategory: ['web']
-category: 'Tooling'
+category: 'Wallets'
 ---

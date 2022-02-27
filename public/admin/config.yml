@@ -48,6 +48,5 @@ collections:
         name: "category",
         widget: "select",
         multiple: false,
-        options: ['dApps', 'Privacy', 'NFTs', 'Metaverse', 'Explore', 'Mining', 'Tooling', 'Tokens'],
+        options: ['dApps', 'Privacy', 'NFTs', 'Metaverse', 'Explore', 'Mining', 'Tooling', 'Tokens', 'Wallets'],
       }
-
