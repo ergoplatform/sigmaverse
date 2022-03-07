@@ -1,25 +1,52 @@
 backend:
   name: github
-  branch: main # Branch to update (optional; defaults to master)
+  branch: master # Branch to update (optional; defaults to master)
   repo: ergoplatform/sigmaverse
   base_url: https://sigmaverse.io
 
 publish_mode: editorial_workflow
-media_folder: "static/img/uploads" # Media files will be stored in the repo under static/images/uploads
-public_folder: "/img/uploads" # The src attribute for uploaded media will begin with /images/uploads
+media_folder: "static" # Media files will be stored in the repo under static/images/uploads
+public_folder: "/images" # The src attribute for uploaded media will begin with /images/uploads
+
 
 collections:
-  - name: 'en_blog'
-    label: 'English blog post'
-    folder: 'applications/'
+  - name: 'new_project'
+    label: 'Project'
+    description: "All sigmaverse projects"
+    folder: 'applications'
     path: '{{slug}}/overview'
-    media_folder: ''
-    public_folder: ''
     create: true
+    identifier_field: name
     fields:
-      - label: Title
-        name: title
-        widget: string
-      - label: 'Cover Image'
-        name: 'image'
-        widget: 'image'
+      - {
+        label: "Name",
+        name: "name",
+        widget: "text"
+      }
+      - {
+        label: "Description",
+        name: "description",
+        widget: "text"
+      }
+      - {
+        label: "Website",
+        name: "website",
+        widget: "text"
+      }
+      - {
+        label: "Logotype",
+        name: "logo_image",
+        widget: "image",
+      }
+      - {
+        label: "Preview",
+        name: "preview_image",
+        widget: "image",
+      }
+      - {
+        label: "Category",
+        name: "category",
+        widget: "select",
+        multiple: false,
+        options: ['dApps', 'Privacy', 'NFTs', 'Metaverse', 'Explore', 'Mining', 'Tooling', 'Tokens', 'Wallets'],
+      }
