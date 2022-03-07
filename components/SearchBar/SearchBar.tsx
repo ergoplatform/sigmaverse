@@ -1,22 +1,19 @@
-import React, { useRef } from 'react';
+import React /*, { useRef }*/ from 'react';
 import SearchIconSvg from './SearchIconSvg';
 
-export default function SearchBar({ filter, setFilter, searchedValue, setSearchedValue }: any) {
-  const ref = useRef<any>();
+export default function SearchBar({ searchedValue, setSearchedValue }: any) {/*  const ref = useRef<any>();*/
 
   return (
     <div className="search">
-      <div className="search__input-group">
-        <SearchIconSvg />
-        <input
-          onChange={({ target: { value } }) => setSearchedValue(value)}
-          value={searchedValue}
-          className="search__input"
-          type="text"
-          placeholder="Search for Projects.."
-        />
-      </div>
-      <div className="filter__container">
+      <SearchIconSvg />
+      <input
+        onChange={({ target: { value } }) => setSearchedValue(value)}
+        value={searchedValue}
+        className="search__input"
+        type="text"
+        placeholder="Search for DApps"
+      />
+      {/*      <div className="filter__container">
         <button
           className="right_button"
           onClick={() => {
@@ -27,14 +24,14 @@ export default function SearchBar({ filter, setFilter, searchedValue, setSearche
           {[
             'All',
             'dApps',
-            'Privacy',           
+            'Privacy',
             'NFTs',
             'Metaverse',
             'Explore',
             'Mining',
             'Tooling',
             'Tokens',
-            
+
           ].map((e) => (
             <div
               key={e}
@@ -51,7 +48,7 @@ export default function SearchBar({ filter, setFilter, searchedValue, setSearche
             ref.current.scrollLeft += 120;
           }}
         />
-      </div>
+      </div>*/}
     </div>
   );
 }

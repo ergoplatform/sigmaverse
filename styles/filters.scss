@@ -1,0 +1,59 @@
+.filter-item {
+  @include flex_cointainer();
+  overflow: scroll;
+  height: 50px;
+  scroll-behavior: smooth;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+  width: 100%;
+
+  &::-webkit-scrollbar{
+    display: none;
+    scrollbar-width: 0px;
+  }
+
+  &__tag {
+    @include flex_cointainer();
+    @include filter_tag();
+    color: #ffffff;
+    opacity: .75;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &__active {
+    @include flex_cointainer();
+    @include filter_tag();
+    color: #b399ff;
+    background-color: rgba(161, 129, 255, 0.25);
+  }
+}
+
+.filter {
+  h1 {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 33px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+
+  &__container{
+    @include flex_cointainer();
+    justify-content: space-evenly;
+    padding-top: 20px;
+    padding-bottom: 25px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  }
+
+  @media (min-width: $mdBreakpoint) {
+    h1 {
+      font-size: 36px;
+      line-height: 42px;
+    }
+  }
+}
