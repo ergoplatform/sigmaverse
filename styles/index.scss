@@ -268,8 +268,8 @@ li {
 
 @media (max-width: $xlBreakpoint) {
   .dapps {
-    column-gap: 20px;
-    row-gap: 20px;
+    column-gap: 30px;
+    row-gap: 30px;
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
