@@ -61,26 +61,21 @@ li {
 .dapps-card {
   border-radius: 10px;
   text-decoration: none !important;
-  box-shadow: 0 1px 4px 0 #dedede, 0 2px 10px 0 #f4f4f4;
   max-width: 100%;
   transition: all 0.1s;
 
-
-  &:hover{
-    box-shadow: 0 1px 4px 0 #6b6bfd, 0 2px 10px 0 #6b6bfd;
-  }
-
   &__preview {
     width: 100%;
-    border-radius: 8px;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
     position: relative;
 
     img {
+      border-radius: 14px;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
       max-height: fit-content;
       min-height: 200px;
       width: 100%;
+      border-radius: 14px;
     }
 
     &::after {    /* height: 50px; */
@@ -122,11 +117,13 @@ li {
 
   &__content {
     display: flex;
-    height: 200px;
+    height: 250px;
     flex-direction: column;
     background-color: #232323;
     padding: 0 30px;
     margin-top: -50px;
+
+    border-radius: 14px;
   }
 
   &__header {
@@ -139,14 +136,38 @@ li {
   }
 
   &__description {
-    color: #6e6d7a;
-    padding-left: 10px;
-    padding-right: 10px;
     text-align:justify;
+    color: rgb(197 197 197);
     font-size: 14px;
     font-weight: 400;
     line-height: 20px;
     overflow: hidden;
+    margin-top: 0;
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 25px;
+  }
+
+  &__name {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 27px;
+  }
+
+  &__divider {
+    background: rgba(255, 255, 255, 0.1);
+    width: 100%;
+    height: 1px;
+  }
+
+  &__link {
+    margin-top: 20px;
+    color: rgba(179, 153, 255, 0.75);
+    outline: none;
+    text-decoration: none;
   }
 }
 
