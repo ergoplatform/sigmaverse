@@ -53,10 +53,11 @@ li {
 .dapps {
   color: #ffffff;
   display: grid;
-  grid-template-columns: 1fr 1fr  1fr 1fr;
+  grid-template-columns: repeat(4, minmax(100px, 1fr));
   justify-content: start;
   column-gap: 30px;
   row-gap: 30px;
+  padding-bottom: 200px;
 }
 
 .dapps-card {
@@ -118,7 +119,6 @@ li {
 
   &__content {
     display: flex;
-    height: 250px;
     flex-direction: column;
     background-color: #232323;
     padding: 0 30px;
@@ -143,8 +143,9 @@ li {
     font-weight: 400;
     line-height: 20px;
     overflow: hidden;
+    height: 120px;
     margin-top: 0;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 20px;
     margin-bottom: 25px;
   }
@@ -154,8 +155,11 @@ li {
     margin-bottom: 10px;
     color: #fff;
     font-weight: bold;
-    font-size: 22px;
+    font-size: 16px;
     line-height: 27px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   &__divider {
@@ -169,6 +173,7 @@ li {
     color: rgba(179, 153, 255, 0.75);
     outline: none;
     text-decoration: none;
+    margin-bottom: 20px;
   }
 }
 

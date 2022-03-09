@@ -31,13 +31,8 @@ export default function IndexPage({ applications }: any) {
 
   return (
     <div className="container">
-      <Header
-        searchedValue={searchedValue}
-        setSearchedValue={setSearchedValue}
-      />
-      <Filters
-        filter={filter}
-        setFilter={setFilter}/>
+      <Header searchedValue={searchedValue} setSearchedValue={setSearchedValue} />
+      <Filters filter={filter} setFilter={setFilter} />
       <div className="dapps">
         <Dapps data={data} filter={filter} />
       </div>
