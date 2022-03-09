@@ -4,7 +4,7 @@ export default function CategoryPresentation({ data }: any) {
   return (
     <>
       {data.map(({ logo, preview, name, description, website }: any) => (
-        <div key={website} className="dapps-card">
+        <a href={website} target="_blank" key={website} className="dapps-card">
           <div className="dapps-card__preview">
             <img src={preview} alt={`${name} preview`} />
           </div>
@@ -13,11 +13,9 @@ export default function CategoryPresentation({ data }: any) {
             <div className="dapps-card__name">{name}</div>
             <p className="dapps-card__description">{description}</p>
             <div className="dapps-card__divider"></div>
-            <a href={website} target="_blank" className="dapps-card__link">
-              Go to project
-            </a>
+            <a className="dapps-card__link">Go to project</a>
           </div>
-        </div>
+        </a>
       ))}
     </>
   );

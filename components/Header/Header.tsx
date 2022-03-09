@@ -56,7 +56,7 @@ export default function Header({ searchedValue, setSearchedValue }: any) {
         </nav>
       </header>
 
-      <div className="header">
+      {/* <div className="header">
         <div className="header__content">
           <h1 className="header__introduce">SIGMAVERSE</h1>
           <p className="header__paragraph">
@@ -74,7 +74,7 @@ export default function Header({ searchedValue, setSearchedValue }: any) {
         <div>
           <img className="sigma-ergonaut" src="/images/Ergonaut_4k.png" alt="ergonaut" />
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }
