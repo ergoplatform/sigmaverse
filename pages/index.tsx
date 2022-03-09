@@ -5,7 +5,7 @@ import path from 'path';
 import { useState, useMemo } from 'react';
 import Fuse from 'fuse.js';
 import Dapps from '../components/categories/dapps';
-import SearchBar from '../components/SearchBar/SearchBar';
+import Filters from '../components/Filters/filters';
 import Header from '../components/Header/Header';
 
 const fuseOptions = {
@@ -30,14 +30,14 @@ export default function IndexPage({ applications }: any) {
   const data = searchedValue ? searchedApplications : applications;
 
   return (
-    <div>
-      <Header />
-      <SearchBar
-        filter={filter}
-        setFilter={setFilter}
-        value={searchedValue}
+    <div className="container">
+      <Header
+        searchedValue={searchedValue}
         setSearchedValue={setSearchedValue}
       />
+      <Filters
+        filter={filter}
+        setFilter={setFilter}/>
       <div className="dapps">
         <Dapps data={data} filter={filter} />
       </div>

@@ -1,7 +1,7 @@
-$xlBreakpoint: 1279px;
-$lgBreakpoint: 991px;
+$xlBreakpoint: 1365px;
+$lgBreakpoint: 1023px;
 $mdBreakpoint: 767px;
-$smBreakpoint: 304px;
+$smBreakpoint: 374px;
 $baseFontSize: 18px;
 $baseFontFamily: "GraphikLCG", sans-serif;
 
@@ -20,7 +20,27 @@ $breakPoints: (
   ),
 );
 
-$xlContent: 1216px;
-$lgContent: 800px;
-$mdContent: 624px;
-$smContent: 272px;
+$xlContent: 1170px;
+$lgContent: 956px;
+$mdContent: 708px;
+$smContent: 315px;
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 30px;
+
+  @media (min-width: $mdBreakpoint) {
+    width: $mdContent;
+    padding: 0;
+  }
+
+  @media (min-width: $lgBreakpoint) {
+    width: $lgContent;
+  }
+
+  @media (min-width: $xlBreakpoint) {
+    width: $xlContent;
+
+  }
+}

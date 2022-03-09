@@ -1,11 +1,43 @@
- @import 'mixin.scss';
-.right_button{
-    @include scroll_button();
-    background-image: url(../static/leftArrow.svg);
+@import 'mixin.scss';
 
+.right_button {
+  @include scroll_button();
+  background-image: url('../static/arrow.svg');
 }
-.left_button{
-    @include scroll_button();
-    background-image: url(../static/rightArrow.svg);
 
+.left_button {
+  @include scroll_button();
+  background-image: url('../static/arrow.svg');
+  transform: rotate(180deg);
+}
+
+@media (min-width: $lgBreakpoint) {
+  .right_button, .left_button {
+    display: none;
+  }
+}
+
+.button {
+  border-radius: 8px;
+  appearance: none;
+  background-color: #A181FF;
+  border: 1px solid #A181FF;
+  box-sizing: border-box;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: bold;
+  height: 36px;
+  line-height: 16px;
+  overflow: hidden;
+  padding: 9px 16px;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  transition: background-color 300ms;
+
+  &:hover {
+    background-color: darken(#A181FF, 5%);
+  }
 }

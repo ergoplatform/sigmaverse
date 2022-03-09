@@ -1,6 +1,6 @@
 @mixin scroll_button {
     border: none;
-    background-color: white;
+    background-color: transparent;
     width: 35px;
     height: 30px;
     background-repeat: no-repeat;
@@ -16,15 +16,11 @@
 
 @mixin filter_tag  {
     justify-content: center;
-    max-width: 120px;
-    min-width: 90px;
-    font-size: 15px;
-    font-weight: 400;
-    line-height: 1.6;
-    margin-left: 10px;
-    border-radius: 20px;
+    padding: 10px 25px;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+    border-radius: 30px;
     cursor: pointer;
-    color: black;
     transition: all 0.1s;
-
 }

@@ -1,0 +1,39 @@
+
+.search {
+  box-sizing: border-box;
+  position: relative;
+  color: #666666;
+  margin-left: 20px;
+  width: 204px;
+
+  .icon {
+    width: 16px;
+    height: 16px;
+    color: #666;
+    fill: currentColor;
+    position: absolute;
+    top: 14px;
+    left: 15px;
+  }
+
+  &__input {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid transparent;
+    border-radius: 8px;
+    color: #666666;
+    padding: 11px 12px 11px 41px;
+    font-size: 14px;
+    line-height: 20px;
+    width: 100%;
+    transition: border 300ms;
+
+    &:focus-within {
+      outline: none;
+      border: 1px solid rgba(#ffffff, .5);
+    }
+  }
+
+  @media (min-width: $lgBreakpoint) {
+    width: 253px;
+  }
+}
