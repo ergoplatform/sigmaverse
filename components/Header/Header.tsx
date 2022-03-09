@@ -1,28 +1,38 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
+import classNames from 'classnames';
 import SearchBar from '../SearchBar/SearchBar';
 
 export default function Header({ searchedValue, setSearchedValue }: any) {
-  let [open, setOpen] = useState(false)
+  let [isOpen, setIsOpen] = useState(false);
 
   return (
     <div>
       <header>
-        <nav className={"navigation " + (open?'navigation--open':'')}>
-          <button className="navigation__toggle" onClick={()=>{document.body.classList.add('sidebar-open');setOpen(true)} }>
+        <nav className={classNames('navigation', { 'navigation--open': isOpen })}>
+          <button
+            className="navigation__toggle"
+            onClick={() => {
+              document.body.classList.add('sidebar-open');
+              setIsOpen(true);
+            }}
+          >
             <img src="/images/icons/burger-menu.svg" alt="Burger" />
           </button>
           <div className="navigation__logo">
             <img src="/images/logo_new.svg" alt="Logotype" />
           </div>
-          <button className="navigation__close" onClick={()=>{document.body.classList.remove('sidebar-open');setOpen(false)}}>
+          <button
+            className="navigation__close"
+            onClick={() => {
+              document.body.classList.remove('sidebar-open');
+              setIsOpen(false);
+            }}
+          >
             <img src="/images/icons/close.svg" alt="Close" />
           </button>
           <ul className="navigation-list">
             <li className="navigation-list__item">
-              <SearchBar
-                value={searchedValue}
-                setSearchedValue={setSearchedValue}
-              />
+              <SearchBar value={searchedValue} setSearchedValue={setSearchedValue} />
             </li>
             <li className="navigation-list__item">
               <a

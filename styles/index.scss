@@ -52,10 +52,10 @@ li {
 .dapps {
   color: #ffffff;
   display: grid;
-  grid-template-columns: 1fr 1fr  1fr ;
+  grid-template-columns: 1fr 1fr  1fr 1fr;
   justify-content: start;
-  column-gap: 40px;
-  row-gap: 40px;
+  column-gap: 30px;
+  row-gap: 30px;
 }
 
 .dapps-card {
@@ -72,22 +72,61 @@ li {
 
   &__preview {
     width: 100%;
-    max-height: fit-content;
-    min-height: 200px;
     border-radius: 8px;
-    border-bottom: 1px solid rgb(238, 238, 238)
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    position: relative;
+
+    img {
+      max-height: fit-content;
+      min-height: 200px;
+      width: 100%;
+    }
+
+    &::after {    /* height: 50px; */
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 107px;
+      width: 100%;
+      background: linear-gradient(
+        180deg
+        , rgba(35, 35, 35, 0) 0%,
+           rgba(35, 35, 35, 0.0086472) 6.67%,
+            rgba(35, 35, 35, 0.03551) 13.33%,
+             rgba(35, 35, 35, 0.0816599) 20%,
+              rgba(35, 35, 35, 0.147411) 26.67%,
+               rgba(35, 35, 35, 0.231775) 33.33%,
+                rgba(35, 35, 35, 0.331884) 40%,
+                 rgba(35, 35, 35, 0.442691) 46.67%,
+                  rgba(35, 35, 35, 0.557309) 53.33%,
+                   rgba(35, 35, 35, 0.668116) 60%,
+                    rgba(35, 35, 35, 0.768225) 66.67%,
+                    rgba(35, 35, 35, 0.852589) 73.33%,
+                     rgba(35, 35, 35, 0.91834) 80%,
+                     rgba(35, 35, 35, 0.96449) 86.67%,
+                      rgba(35, 35, 35, 0.991353) 93.33%,
+                      #232323 100%
+        );
+    }
   }
 
   &__logotype {
-    width: 24px;
-    height: 24px;
+    width: 64px;
+    height: 64px;
     margin-right: 5px;
+    z-index: 100;
+    border-radius: 50%;
   }
 
   &__content {
     display: flex;
     height: 200px;
     flex-direction: column;
+    background-color: #232323;
+    padding: 0 30px;
+    margin-top: -50px;
   }
 
   &__header {
@@ -210,7 +249,7 @@ li {
   .dapps {
     column-gap: 20px;
     row-gap: 20px;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
