@@ -1,0 +1,10 @@
+on:
+  push:
+    # Sequence of patterns matched against refs/heads
+    branches:
+      - main
+jobs:
+  deploy_app:
+    runs-on: ubuntu-latest
+    steps:
+      - run: bash ./tools/deploy.sh
