@@ -1,12 +1,12 @@
-import matter from 'gray-matter';
 import { GetStaticProps } from 'next';
-import fs from 'fs';
-import path from 'path';
 import { useState, useMemo } from 'react';
 import Fuse from 'fuse.js';
 import Dapps from '../components/categories/dapps';
 import Filters from '../components/Filters/filters';
 import Header from '../components/Header/Header';
+import Carousel from '../components/Carousel/Carousel';
+import { getApplcations } from '../utils/getApplications';
+import { getCarouselItems } from '../utils/getCarouselItems';
 
 const fuseOptions = {
   shouldSort: true,
@@ -17,7 +17,7 @@ const fuseOptions = {
   keys: ['name', 'description', 'appCategory'],
 };
 
-export default function IndexPage({ applications }: any) {
+export default function IndexPage({ applications, carouselItems }: any) {
   const [searchedValue, setSearchedValue] = useState<string>('');
   const [filter, setFilter] = useState<string>('All');
 
@@ -32,6 +32,7 @@ export default function IndexPage({ applications }: any) {
   return (
     <div className="container">
       <Header searchedValue={searchedValue} setSearchedValue={setSearchedValue} />
+      <Carousel carouselItems={carouselItems} />
       <Filters filter={filter} setFilter={setFilter} />
       <div className="dapps">
         <Dapps data={data} filter={filter} />
@@ -41,44 +42,12 @@ export default function IndexPage({ applications }: any) {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const applicationsDirectory = path.join(process.cwd(), 'applications');
-  const applicationsImagesDirectory = path.join(process.cwd(), 'public/images/applications');
-
-  if (!fs.existsSync(applicationsImagesDirectory)) {
-    fs.mkdirSync(applicationsImagesDirectory);
-  }
-
-  const filenames = fs.readdirSync(applicationsDirectory);
-
-  const applications = filenames
-    .filter((filename) => !filename.match('.DS_Store'))
-    .map((filename) => {
-      const filePath = path.join(applicationsDirectory, filename);
-
-      const { data }: any = matter(fs.readFileSync(`${filePath}/overview.md`, 'utf8'));
-
-      const newLogoPath = `/images/applications/${data.logo_image}`;
-      const newPreviewPath = `/images/applications/${data.preview_image}`;
-
-      fs.copyFileSync(
-        `${filePath}/${data.logo_image}`,
-        `${applicationsImagesDirectory}/${data.logo_image}`,
-      );
-      fs.copyFileSync(
-        `${filePath}/${data.preview_image}`,
-        `${applicationsImagesDirectory}/${data.preview_image}`,
-      );
-
-      return {
-        ...data,
-        logo: newLogoPath,
-        preview: newPreviewPath,
-      };
-    });
-
+  const applications = getApplcations();
+  const carouselItems = getCarouselItems();
   return {
     props: {
       applications,
+      carouselItems,
     },
   };
 };
