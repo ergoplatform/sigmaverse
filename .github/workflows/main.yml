@@ -27,4 +27,4 @@ jobs:
           known_hosts: ${{ secrets.KNOWN_HOSTS }}
 
       - name: Deploy the app
-        run: bash ./tools/deploy.sh
+        run: bash tools/deploy.sh
