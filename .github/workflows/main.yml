@@ -27,4 +27,4 @@ jobs:
           known_hosts: ${{ secrets.KNOWN_HOSTS }}
 
       - name: Deploy the app
-        run: ls
+        run: cat package.json
