@@ -51,7 +51,7 @@ collections:
         options: ['dApps', 'Privacy', 'NFTs', 'Metaverse', 'Explore', 'Mining', 'Tooling', 'Tokens', 'Wallets'],
       }
   - name: 'new_carousel_project'
-    label: 'Project'
+    label: 'Featured carousel'
     description: "All featured carousel projects"
     folder: 'carousel'
     path: '{{slug}}/overview'
