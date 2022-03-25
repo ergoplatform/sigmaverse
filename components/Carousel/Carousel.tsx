@@ -18,15 +18,6 @@ const Carousel = ({ carouselItems }: Props) => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
   const [swiperInstance, setSwiperInstance] = useState<any>(null);
   const [activeIndex, setActiveIndex] = useState(0);
-  const [paused, setPaused] = useState(false);
-
-  const slideTo = useCallback(
-    (item) => {
-      swiperInstance.slideTo(item);
-    },
-    [swiperInstance],
-  );
-  console.log(activeIndex);
 
   return (
     <div className={styles.carousel}>
@@ -80,6 +71,7 @@ const Carousel = ({ carouselItems }: Props) => {
         onSwiper={setThumbsSwiper}
         className={styles.carouselThumbContainer}
         spaceBetween={30}
+        allowTouchMove={false}
       >
         {carouselItems.map(({ logo, name, title }: any, index) => (
           <SwiperSlide key={title}>
