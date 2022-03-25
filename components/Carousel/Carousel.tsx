@@ -73,7 +73,7 @@ const Carousel = ({ carouselItems }: Props) => {
         spaceBetween={30}
         allowTouchMove={false}
       >
-        {carouselItems.map(({ logo, name, title }: any, index) => (
+        {carouselItems.map(({ logo, name, title }: any, index: any) => (
           <SwiperSlide key={title}>
             <div
               className={classNames(styles.carouselThumb, {
