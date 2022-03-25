@@ -1,35 +1,169 @@
 .carouselItem {
-  border: 1px solid transparent;
-  border-radius: 16px;
   height: 440px;
   width: 100%;
   position: relative;
+  background: #222324;
+  border: 1px solid transparent;
+  border-radius: 16px;
 
   &__content {
-    border-radius: inherit;
     height: 100%;
-    z-index: 2;
     position: relative;
-    max-width: 40%;
-    background: linear-gradient(224.09deg, rgba(234, 94, 66, 0) 49.3%, rgba(234, 94, 66, 0.00518832) 52.55%, rgba(234, 93, 68, 0.021306) 55.8%, rgba(234, 91, 71, 0.0489959) 59.05%, rgba(234, 89, 74, 0.0884468) 62.3%, rgba(234, 86, 79, 0.139065) 65.55%, rgba(234, 82, 85, 0.19913) 68.8%, rgba(234, 79, 91, 0.265615) 72.05%, rgba(234, 74, 97, 0.334385) 75.3%, rgba(234, 71, 103, 0.40087) 78.55%, rgba(234, 67, 109, 0.460935) 81.8%, rgba(234, 64, 114, 0.511553) 85.05%, rgba(234, 62, 117, 0.551004) 88.3%, rgba(234, 60, 120, 0.578694) 91.55%, rgba(234, 59, 122, 0.594812) 94.8%, rgba(234, 59, 122, 0.6) 98.05%);
+    max-width: 50%;
+    padding-top: 60px;
+    padding-left: 60px;
+    padding-bottom: 60px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
 
-    &::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      right: -100px;
-      width: 100px;
-      height: 100%;
-      background: linear-gradient(180deg, rgba(35, 35, 35, 0) 0%, rgba(35, 35, 35, 0.0086472) 6.67%, rgba(35, 35, 35, 0.03551) 13.33%, rgba(35, 35, 35, 0.0816599) 20%, rgba(35, 35, 35, 0.147411) 26.67%, rgba(35, 35, 35, 0.231775) 33.33%, rgba(35, 35, 35, 0.331884) 40%, rgba(35, 35, 35, 0.442691) 46.67%, rgba(35, 35, 35, 0.557309) 53.33%, rgba(35, 35, 35, 0.668116) 60%, rgba(35, 35, 35, 0.768225) 66.67%, rgba(35, 35, 35, 0.852589) 73.33%, rgba(35, 35, 35, 0.91834) 80%, rgba(35, 35, 35, 0.96449) 86.67%, rgba(35, 35, 35, 0.991353) 93.33%, #232323 100%);
+  &__logo {
+    height: 52px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+
+    span {
+      font-size: 22px;
+      margin-left: 10px;
+      color: #fff;
+    }
+
+    img {
+      height: inherit
+    }
+  }
+
+  &__title {
+    font-size: 36px;
+    line-height: 46px;
+    font-style: normal;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 0;
+    margin-top: auto;
+  }
+
+  &__description {
+    margin-top: 10px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #fff;
+  }
+
+  &__button {
+    margin-top: 30px;
+
+    a {
+      background: #FFFFFF;
+      box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px rgba(0, 0, 0, 0.14), 0px 1px 5px rgba(0, 0, 0, 0.12);
+      border-radius: 4px;
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 26px;
+      letter-spacing: 0.46px;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: #000000;
+      width: 162px;
+      height: 42px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: all ease-in 0.15s;
+
+
+      &:hover {
+        background: #A181FF;
+        color: white;
+      }
     }
   }
 
   &__img {
-    z-index: 1;
     height: 100%;
     position: absolute;
     top:  0;
     right: 0;
     width: 60%;
+    border-right: 1px solid transparent;
+    border-radius: 16px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+}
+
+.carouselThumbContainer {
+  margin-top: 30px;
+}
+
+.carouselThumb {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  background: #232323;
+  border-radius: 12px;
+  cursor: pointer;
+  overflow: hidden;
+
+  &__logo {
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+
+    span {
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 21px;
+      margin-left: 10px;
+      color: white;
+    }
+
+    img {
+      width: 44px;
+      height: 44px;
+    }
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(135, 135, 135, 0.3);
+    height: 100%;
+    width: 0;
+  }
+
+  &_active {
+    position: relative;
+
+    &::before {
+      animation: progress ease-in-out running 6s;
+      animation-fill-mode: forwards;
+    }
+  }
+}
+
+
+@keyframes progress {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+
+@media (max-width: 1170px) {
+  .carousel {
+    display: none;
   }
 }

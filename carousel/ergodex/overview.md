@@ -1,5 +1,6 @@
 ---
 name: 'ERGODEX'
+title: 'Decentralized exchange on Ergo and Cardano'
 description: 'A non-custodial, decentralised exchange that allows a quick, effortless and secure transfer of liquidity between the Ergo and Cardano networks.'
 website: 'https://ergodex.io/'
 logo_image: 'ergodex-logo.png'
