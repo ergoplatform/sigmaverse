@@ -1,38 +1,34 @@
-import React, { useState } from 'react';
+import React, {useRef} from 'react';
 import classNames from 'classnames';
 import SearchBar from '../SearchBar/SearchBar';
+import useSideBar from '../../hooks/useSideBar';
 
-export default function Header({ searchedValue, setSearchedValue }: any) {
-  let [isOpen, setIsOpen] = useState(false);
 
+export default function Header({searchedValue, setSearchedValue}: any) {
+  const sideBarRef = useRef(null);
+  let {isOpen, open, close} = useSideBar(sideBarRef)
   return (
     <div>
       <header>
-        <nav className={classNames('navigation', { 'navigation--open': isOpen })}>
+        <nav  className={classNames('navigation', {'navigation--open': isOpen})}>
           <button
             className="navigation__toggle"
-            onClick={() => {
-              document.body.classList.add('sidebar-open');
-              setIsOpen(true);
-            }}
+            onClick={()=>open()}
           >
-            <img src="/images/icons/burger-menu.svg" alt="Burger" />
+            <img src="/images/icons/burger-menu.svg" alt="Burger"/>
           </button>
           <div className="navigation__logo">
-            <img src="/images/logo_new.svg" alt="Logotype" />
+            <img src="/images/logo_new.svg" alt="Logotype"/>
           </div>
           <button
             className="navigation__close"
-            onClick={() => {
-              document.body.classList.remove('sidebar-open');
-              setIsOpen(false);
-            }}
+            onClick={()=>close()}
           >
-            <img src="/images/icons/close.svg" alt="Close" />
+            <img src="/images/icons/close.svg" alt="Close"/>
           </button>
-          <ul className="navigation-list">
+          <ul ref={sideBarRef} className="navigation-list">
             <li className="navigation-list__item">
-              <SearchBar value={searchedValue} setSearchedValue={setSearchedValue} />
+              <SearchBar value={searchedValue} setSearchedValue={setSearchedValue}/>
             </li>
             <li className="navigation-list__item">
               <a
