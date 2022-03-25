@@ -8,7 +8,7 @@ Swiper.use([Autoplay, EffectFade, Thumbs]);
 import 'swiper/components/effect-fade/effect-fade.min.css';
 import 'swiper/swiper-bundle.min.css';
 import 'swiper/swiper.min.css';
-import styles from './carousel.module.scss';
+import styles from './Carousel.module.scss';
 
 type Props = {
   carouselItems: any;
