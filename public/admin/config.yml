@@ -50,3 +50,41 @@ collections:
         multiple: false,
         options: ['dApps', 'Privacy', 'NFTs', 'Metaverse', 'Explore', 'Mining', 'Tooling', 'Tokens', 'Wallets'],
       }
+  - name: 'new_carousel_project'
+    label: 'Project'
+    description: "All featured carousel projects"
+    folder: 'carousel'
+    path: '{{slug}}/overview'
+    create: true
+    identifier_field: name
+    fields:
+      - {
+        label: "Name",
+        name: "name",
+        widget: "text"
+      }
+      - {
+        label: "Project Title",
+        name: "title",
+        widget: "text"
+      }
+      - {
+        label: "Description",
+        name: "description",
+        widget: "text"
+      }
+      - {
+        label: "Project website",
+        name: "website",
+        widget: "text"
+      }
+      - {
+        label: "Logotype",
+        name: "logo_image",
+        widget: "image",
+      }
+      - {
+        label: "Carousel Image",
+        name: "preview_image",
+        widget: "image",
+      }
