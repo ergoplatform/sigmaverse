@@ -1,19 +1,19 @@
-import {useEffect, useState} from "react";
+import { useEffect, useState } from 'react';
 
 export default function (ref) {
   let [isOpen, setIsOpen] = useState(false);
 
-  const isBrowser = typeof window !== "undefined";
+  const isBrowser = typeof window !== 'undefined';
 
   const open = () => {
     if (isBrowser) document.body.classList.add('sidebar-open');
-    setIsOpen(true)
-  }
+    setIsOpen(true);
+  };
 
   const close = () => {
     if (isBrowser) document.body.classList.remove('sidebar-open');
     setIsOpen(false);
-  }
+  };
 
   useEffect(() => {
     /**
@@ -21,18 +21,17 @@ export default function (ref) {
      */
     function handleClickOutside(event) {
       if (ref.current && !ref.current.contains(event.target)) {
-        close()
+        close();
       }
     }
 
     // Bind the event listener
-    document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener('mousedown', handleClickOutside);
     return () => {
       // Unbind the event listener on clean up
-      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener('mousedown', handleClickOutside);
     };
   }, [ref]);
 
-
-  return {isOpen, open, close}
+  return { isOpen, open, close };
 }
