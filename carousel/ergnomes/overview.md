@@ -1,7 +1,7 @@
 ---
 name: Ergnomes
-title: Unique & Hand-Drawn. Collectable Characters, Plants and Pets
-description: A blend of algorithmically modified hand-drawn art and technology,
+title: Ergnomes
+description: Unique & Hand-Drawn. Collectable Characters, Plants and Pets. A blend of algorithmically modified hand-drawn art and technology,
   using Ergo Platform's smart contracts to make this a pioneering NFT Project.
 website: https://ergnomes.io/
 logo_image: ergnomes-logo.png

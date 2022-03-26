@@ -1,8 +1,6 @@
 ---
-name: SigmaUSD
-title: |-
-  No intermediaries, no middlemen,
-  just pure, decentralized finance.
+name: 'SigmaUSD'
+title: SigmaUSD
 description: Experience the latest advancements in Stablecoins by buying and
   selling SigUSD and SigRSV using Ergo and smart contracts. This project is
   based on the AgeUSD Protocol
