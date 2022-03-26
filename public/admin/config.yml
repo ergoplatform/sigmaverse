@@ -50,6 +50,8 @@ collections:
         multiple: false,
         options: ['dApps', 'Privacy', 'NFTs', 'Metaverse', 'Explore', 'Mining', 'Tooling', 'Tokens', 'Wallets'],
       }
+      - { label: 'Date', name: 'date', widget: 'datetime' }
+
   - name: 'new_carousel_project'
     label: 'Featured carousel'
     description: "All featured carousel projects"

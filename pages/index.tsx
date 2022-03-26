@@ -1,7 +1,7 @@
 import { GetStaticProps } from 'next';
 import { useState, useMemo } from 'react';
 import Fuse from 'fuse.js';
-import Dapps from '../components/categories/dapps';
+import Dapps from '../components/Dapps/Dapps';
 import Filters from '../components/Filters/filters';
 import Header from '../components/Header/Header';
 import Carousel from '../components/Carousel/Carousel';

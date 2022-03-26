@@ -1,5 +1,5 @@
 import React from 'react';
-import CategoryPresentation from './categoryPresentation';
+import DappsCard from './DappsCard';
 
 let cache: any = null;
 
@@ -20,8 +20,8 @@ export default function Dapps({ data, filter }: any) {
   }
 
   if (filter === 'All') {
-    return <CategoryPresentation data={data} />;
+    return <DappsCard data={data} />;
   }
 
-  return <CategoryPresentation data={cache[filter]} />;
+  return <DappsCard data={cache[filter]} />;
 }
