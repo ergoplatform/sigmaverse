@@ -116,7 +116,6 @@
     align-items: center;
     position: relative;
     z-index: 2;
-    border-radius: 25px;
 
     span {
       font-weight: 500;
@@ -129,6 +128,7 @@
     img {
       width: 44px;
       height: 44px;
+      border-radius: 25px;
     }
   }
 
