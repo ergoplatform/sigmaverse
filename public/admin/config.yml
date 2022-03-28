@@ -58,7 +58,6 @@ collections:
     folder: 'carousel'
     path: '{{slug}}'
     media_folder: '/public/images/carousel/'
-    create: true
     identifier_field: name
     fields:
       - {
