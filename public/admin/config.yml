@@ -56,7 +56,8 @@ collections:
     label: 'Featured carousel'
     description: "All featured carousel projects"
     folder: 'carousel'
-    path: '{{slug}}/overview'
+    path: '{{slug}}'
+    media_folder: '/public/images/carousel/'
     create: true
     identifier_field: name
     fields:

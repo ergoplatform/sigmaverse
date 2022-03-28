@@ -17,19 +17,10 @@ export const getCarouselItems = () => {
     .map((filename) => {
       const filePath = path.join(carouselItemsDirectory, filename);
 
-      const { data }: any = matter(fs.readFileSync(`${filePath}/overview.md`, 'utf8'));
+      const { data }: any = matter(fs.readFileSync(`${filePath}`, 'utf8'));
 
       const newLogoPath = `/images/carousel/${data.logo_image}`;
       const newPreviewPath = `/images/carousel/${data.preview_image}`;
-
-      fs.copyFileSync(
-        `${filePath}/${data.logo_image}`,
-        `${carouselItemsImagesDirectory}/${data.logo_image}`,
-      );
-      fs.copyFileSync(
-        `${filePath}/${data.preview_image}`,
-        `${carouselItemsImagesDirectory}/${data.preview_image}`,
-      );
 
       return {
         ...data,
