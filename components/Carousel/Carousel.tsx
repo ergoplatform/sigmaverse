@@ -27,7 +27,7 @@ const Carousel = ({ carouselItems }: Props) => {
         onSwiper={setSwiperInstance}
         allowTouchMove={false}
         autoplay={{
-          delay: 6000,
+          delay: 7000,
           disableOnInteraction: false,
         }}
         effect="fade"
