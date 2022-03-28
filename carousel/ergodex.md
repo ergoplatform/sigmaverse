@@ -6,5 +6,5 @@ description: A non-custodial, decentralized exchange that allows a quick,
   networks.
 website: https://ergodex.io/
 logo_image: ergodex-logo.png
-preview_image: ergodex.png
+preview_image: bitmasks.png
 ---
