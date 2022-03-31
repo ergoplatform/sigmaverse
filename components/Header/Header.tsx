@@ -1,36 +1,25 @@
-import React, { useState } from 'react';
+import React, { useRef } from 'react';
 import classNames from 'classnames';
 import SearchBar from '../SearchBar/SearchBar';
+import useSideBar from '../../hooks/useSideBar';
 
 export default function Header({ searchedValue, setSearchedValue }: any) {
-  let [isOpen, setIsOpen] = useState(false);
-
+  const sideBarRef = useRef(null);
+  let { isOpen, open, close } = useSideBar(sideBarRef);
   return (
     <div>
       <header>
         <nav className={classNames('navigation', { 'navigation--open': isOpen })}>
-          <button
-            className="navigation__toggle"
-            onClick={() => {
-              document.body.classList.add('sidebar-open');
-              setIsOpen(true);
-            }}
-          >
+          <button className="navigation__toggle" onClick={() => open()}>
             <img src="/images/icons/burger-menu.svg" alt="Burger" />
           </button>
           <div className="navigation__logo">
             <img src="/images/logo_new.svg" alt="Logotype" />
           </div>
-          <button
-            className="navigation__close"
-            onClick={() => {
-              document.body.classList.remove('sidebar-open');
-              setIsOpen(false);
-            }}
-          >
+          <button className="navigation__close" onClick={() => close()}>
             <img src="/images/icons/close.svg" alt="Close" />
           </button>
-          <ul className="navigation-list">
+          <ul ref={sideBarRef} className="navigation-list">
             <li className="navigation-list__item">
               <SearchBar value={searchedValue} setSearchedValue={setSearchedValue} />
             </li>
