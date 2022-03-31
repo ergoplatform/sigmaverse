@@ -1,11 +1,11 @@
 import React, { useRef } from 'react';
 import classNames from 'classnames';
 import SearchBar from '../SearchBar/SearchBar';
-import useSideBar from '../../hooks/useSideBar';
+import { useSidebar } from '../../hooks/useSideBar';
 
 export default function Header({ searchedValue, setSearchedValue }: any) {
   const sideBarRef = useRef(null);
-  let { isOpen, open, close } = useSideBar(sideBarRef);
+  let { isOpen, open, close } = useSidebar(sideBarRef);
   return (
     <div>
       <header>

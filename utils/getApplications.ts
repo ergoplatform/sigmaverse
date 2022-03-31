@@ -35,6 +35,7 @@ export const getApplcations = () => {
         ...data,
         logo: newLogoPath,
         preview: newPreviewPath,
+        date: Math.floor(data.date / 1000),
       };
     });
 

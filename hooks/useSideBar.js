@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-export default function (ref) {
+export const useSidebar = (ref) => {
   let [isOpen, setIsOpen] = useState(false);
 
   const isBrowser = typeof window !== 'undefined';
@@ -34,4 +34,4 @@ export default function (ref) {
   }, [ref]);
 
   return { isOpen, open, close };
-}
+};
