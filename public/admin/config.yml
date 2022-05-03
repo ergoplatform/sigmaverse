@@ -48,7 +48,7 @@ collections:
         name: "category",
         widget: "select",
         multiple: false,
-        options: ['dApps', 'Privacy', 'NFTs', 'Metaverse', 'Explore', 'Mining', 'Tooling', 'Tokens', 'Wallets'],
+        options: ['dApps', 'Privacy', 'NFTs', 'Metaverse', 'Explore', 'Mining', 'Tooling', 'Tokens', 'Wallets', 'Dev Tools'],
       }
       - { label: 'Date', name: 'date', widget: 'datetime' }
 
