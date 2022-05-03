@@ -6,5 +6,5 @@ website: https://k1pool.com/pool/erg
 logo_image: k1.jpg
 preview_image: screen-shot-2022-05-02-at-9.29.04-pm.png
 category: Mining
-date: 2022-05-03T04:29:08.227Z
+date: 2022-05-03T04:31:10.143Z
 ---
