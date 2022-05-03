@@ -7,5 +7,5 @@ website: https://www.666pool.com/#/pool-data?coin=ERGO
 logo_image: screen-shot-2022-05-02-at-8.55.01-pm.png
 preview_image: screen-shot-2022-05-02-at-8.56.01-pm.png
 category: Mining
-date: 2022-05-03T03:55:06.167Z
+date: 2022-05-03T03:58:51.726Z
 ---
