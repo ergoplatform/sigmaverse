@@ -7,5 +7,5 @@ website: https://woolypooly.com/en/coin/erg
 logo_image: wp.jpg
 preview_image: screen-shot-2022-05-02-at-8.45.24-pm.png
 category: Mining
-date: 2022-05-03T03:48:35.857Z
+date: 2022-05-03T03:51:17.161Z
 ---
