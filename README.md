@@ -32,7 +32,7 @@ Your logo_image should be small, square and have a transparent background if the
 
 ## Categories
 
-['dApps', 'Privacy', 'NFTs', 'Metaverse', 'Explore', 'Mining', 'Tooling', 'Tokens', 'Wallets']
+['dApps', 'Privacy', 'NFTs', 'Metaverse', 'Explore', 'Mining', 'Tooling', 'Tokens', 'Wallets', 'Dev Tools']
 
 
 
