@@ -5,5 +5,5 @@ website: https://ergonaut.space/en/Guides/Mining
 logo_image: pow-to-the-people.jpeg
 preview_image: screen-shot-2022-05-02-at-9.26.25-pm.png
 category: Mining
-date: 2022-05-03T04:25:54.501Z
+date: 2022-05-03T04:28:38.203Z
 ---
