@@ -60,6 +60,7 @@ collections:
     media_folder: '/public/images/carousel/'
     public_folder: ''
     identifier_field: name
+    create: true
     fields:
       - {
         label: "Name",
