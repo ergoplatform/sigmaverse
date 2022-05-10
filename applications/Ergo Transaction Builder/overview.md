@@ -5,6 +5,6 @@ website: 'https://thierrym1212.github.io/txbuilder/'
 logo_image: 'transaction-builder-logo.png'
 preview_image: 'transaction-builder-preview.png'
 appCategory: ['web']
-category: 'Tooling'
+category: 'Dev Tools'
 
 ---
