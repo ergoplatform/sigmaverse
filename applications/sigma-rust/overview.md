@@ -6,5 +6,5 @@ website: https://github.com/ergoplatform/sigma-rust#usage-examples
 logo_image: 27490654.png
 preview_image: screen-shot-2022-05-15-at-11.28.44-am.png
 category: Dev Tools
-date: 2022-05-15T18:26:44.793Z
+date: 2022-05-15T18:29:38.823Z
 ---
