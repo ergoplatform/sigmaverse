@@ -1,5 +1,5 @@
 ---
-name: Ergo.Watch API
+name: ErgoWatch API
 description: ErgoWatch consists of a chain indexer (the "watcher") and an API
   exposing indexed data.
 website: https://ergo.watch/api/v0/docs
