@@ -25,7 +25,7 @@ export default function Filters({ filter, setFilter }: any) {
             'Tooling',
             'Tokens',
             'Wallets',
-            // 'Dev Tools',
+            'Dev Tools',
           ].map((e) => (
             <div
               key={e}
