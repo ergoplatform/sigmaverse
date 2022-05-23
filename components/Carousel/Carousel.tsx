@@ -9,6 +9,7 @@ import 'swiper/components/effect-fade/effect-fade.min.css';
 import 'swiper/swiper-bundle.min.css';
 import 'swiper/swiper.min.css';
 import styles from './Carousel.module.scss';
+import { Heading } from '@chakra-ui/react';
 
 type Props = {
   carouselItems: any;
@@ -21,6 +22,9 @@ const Carousel = ({ carouselItems }: Props) => {
 
   return (
     <div className={styles.carousel}>
+      <Heading fontWeight={700} mb={8}>
+        Featured Projects
+      </Heading>
       <ReactSwiper
         spaceBetween={50}
         slidesPerView={1}

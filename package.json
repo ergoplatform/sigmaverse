@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "@babel/core": "^7.17.10",
+    "@chakra-ui/icons": "^2.0.0",
     "@chakra-ui/react": "^2.0.0",
     "@emotion/react": "^11.9.0",
     "@emotion/styled": "^11.8.1",
@@ -23,6 +24,7 @@
     "normalize.css": "^8.0.1",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
+    "react-icons": "^4.3.1",
     "swiper": "^6.8.4"
   },
   "devDependencies": {

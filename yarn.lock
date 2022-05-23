@@ -1229,6 +1229,14 @@
   dependencies:
     "@chakra-ui/utils" "2.0.0"
 
+"@chakra-ui/icons@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@chakra-ui/icons/-/icons-2.0.0.tgz#2a23cf702823b922eecbaa4228b08d807767434b"
+  integrity sha512-2lArHMil6O0FwG6TghKwbe453BM1Zzp22U8+oyTFYDVwqhmBTMAepE9TsBg4w/nnH0aeYjQpA1VVSopgB7HBMw==
+  dependencies:
+    "@chakra-ui/icon" "3.0.0"
+    "@types/react" "^18.0.1"
+
 "@chakra-ui/image@2.0.0":
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/@chakra-ui/image/-/image-2.0.0.tgz#84f62adafbb1c03229296f3988104df6657fa0bf"
@@ -1955,6 +1963,20 @@
   dependencies:
     "@types/prop-types" "*"
     csstype "^3.0.2"
+
+"@types/react@^18.0.1":
+  version "18.0.9"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-18.0.9.tgz#d6712a38bd6cd83469603e7359511126f122e878"
+  integrity sha512-9bjbg1hJHUm4De19L1cHiW0Jvx3geel6Qczhjd0qY5VKVE2X5+x77YxAepuCwVh4vrgZJdgEJw48zrhRIeF4Nw==
+  dependencies:
+    "@types/prop-types" "*"
+    "@types/scheduler" "*"
+    csstype "^3.0.2"
+
+"@types/scheduler@*":
+  version "0.16.2"
+  resolved "https://registry.yarnpkg.com/@types/scheduler/-/scheduler-0.16.2.tgz#1a62f89525723dde24ba1b01b092bf5df8ad4d39"
+  integrity sha512-hppQEBDmlwhFAXKJX2KnWLYu5yMfi91yazPb2l+lbJiwW+wdo1gNeRA+3RgNSO39WYX2euey41KEwnqesU2Jew==
 
 "@typescript-eslint/eslint-plugin@^5.23.0", "@typescript-eslint/eslint-plugin@^5.5.0":
   version "5.23.0"
@@ -4507,6 +4529,11 @@ react-focus-lock@2.5.2:
     react-clientside-effect "^1.2.5"
     use-callback-ref "^1.2.5"
     use-sidecar "^1.0.5"
+
+react-icons@^4.3.1:
+  version "4.3.1"
+  resolved "https://registry.yarnpkg.com/react-icons/-/react-icons-4.3.1.tgz#2fa92aebbbc71f43d2db2ed1aed07361124e91ca"
+  integrity sha512-cB10MXLTs3gVuXimblAdI71jrJx8njrJZmNMEMC+sQu5B/BIOmlsAjskdqpn81y8UBVEGuHODd7/ci5DvoSzTQ==
 
 react-is@^16.13.1, react-is@^16.7.0:
   version "16.13.1"
