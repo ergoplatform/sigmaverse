@@ -1,58 +1,42 @@
 import {
-  Box,
   Flex,
   Text,
-  IconButton,
-  Button,
   Stack,
-  Collapse,
-  Popover,
-  PopoverTrigger,
+  Link as ChakraLink,
   useColorModeValue,
-  useDisclosure,
+  Box,
+  Collapse,
 } from '@chakra-ui/react';
-import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
-import { FaPlus } from 'react-icons/fa';
 
+import React, { useRef } from 'react';
+import classNames from 'classnames';
+import { useSidebar } from '../../hooks/useSideBar';
 import Link from 'next/link';
 
 export default function Header() {
-  const { isOpen, onToggle } = useDisclosure();
+  const sideBarRef = useRef(null);
+  let { isOpen, open, close } = useSidebar(sideBarRef);
 
   return (
-    <Box>
-      <Flex
-        color={useColorModeValue('gray.600', 'white')}
-        minH={'60px'}
-        py={{ base: 2 }}
-        borderBottom={1}
-        borderStyle={'solid'}
-        borderColor={useColorModeValue('gray.200', 'gray.900')}
-        align={'center'}
-      >
+    <>
+      <Box display={{ base: 'none', md: 'block' }}>
         <Flex
-          flex={{ base: 1, md: 'auto' }}
-          ml={{ base: -2 }}
-          display={{ base: 'flex', md: 'none' }}
+          color={useColorModeValue('gray.600', 'white')}
+          minH={'60px'}
+          py={{ base: 6 }}
+          align={'center'}
         >
-          <IconButton
-            onClick={onToggle}
-            icon={isOpen ? <CloseIcon w={3} h={3} /> : <HamburgerIcon w={5} h={5} />}
-            variant={'ghost'}
-            aria-label={'Toggle Navigation'}
-          />
-        </Flex>
-        <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }} align="center">
-          <Link href="/">
-            <img src="/images/logo_new.svg" alt="Logotype" />
-          </Link>
+          <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }} align="center">
+            <Link href="/">
+              <img src="/images/logo_new.svg" style={{ height: '40px' }} alt="Logotype" />
+            </Link>
 
-          <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
-            <DesktopNav />
+            <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
+              <DesktopNav />
+            </Flex>
           </Flex>
-        </Flex>
 
-        {/* <Stack flex={{ base: 1, md: 0 }} justify={'flex-end'} direction={'row'} spacing={6}>
+          {/* <Stack flex={{ base: 1, md: 0 }} justify={'flex-end'} direction={'row'} spacing={6}>
           <Button
             display={{ base: 'none', md: 'inline-flex' }}
             fontSize={'sm'}
@@ -68,74 +52,87 @@ export default function Header() {
             Add your dApp
           </Button>
         </Stack> */}
-      </Flex>
-      <Collapse in={isOpen} animateOpacity>
-        <MobileNav />
-      </Collapse>
-    </Box>
+        </Flex>
+      </Box>
+
+      <Box display={{ base: 'block', md: 'none' }}>
+        <header>
+          <nav className={classNames('navigation', { 'navigation--open': isOpen })}>
+            <button className="navigation__toggle" onClick={() => open()}>
+              <img src="/images/icons/burger-menu.svg" alt="Burger" />
+            </button>
+            <div className="navigation__logo">
+              <Link href="/">
+                <img src="/images/logo_new.svg" alt="Logotype" />
+              </Link>
+            </div>
+            <button className="navigation__close" onClick={() => close()}>
+              <img src="/images/icons/close.svg" alt="Close" />
+            </button>
+            <Box display={{ base: 'block', md: 'none' }}>
+              <ul ref={sideBarRef} className="navigation-list">
+                <li className="navigation-list__item">
+                  <Flex
+                    py={2}
+                    as={Link}
+                    href={'/'}
+                    justify={'space-between'}
+                    align={'center'}
+                    _hover={{
+                      textDecoration: 'none',
+                    }}
+                  >
+                    <Text fontWeight={600} color={useColorModeValue('gray.600', 'gray.200')}>
+                      Home
+                    </Text>
+                  </Flex>
+                </li>
+                <li className="navigation-list__item">
+                  <Flex
+                    py={2}
+                    as={Link}
+                    href={'/all-projects'}
+                    justify={'space-between'}
+                    align={'center'}
+                    _hover={{
+                      textDecoration: 'none',
+                    }}
+                  >
+                    <Text fontWeight={600} color={useColorModeValue('gray.600', 'gray.200')}>
+                      Browse Projects
+                    </Text>
+                  </Flex>
+                </li>
+              </ul>
+            </Box>
+          </nav>
+        </header>
+      </Box>
+    </>
   );
 }
 
 const DesktopNav = () => {
-  const linkColor = useColorModeValue('gray.600', 'gray.200');
-  const linkHoverColor = useColorModeValue('gray.800', 'white');
-
   return (
     <Stack direction={'row'} spacing={4}>
       {NAV_ITEMS.map((navItem) => (
         <Box key={navItem.label}>
-          <Popover trigger={'hover'} placement={'bottom-start'}>
-            <PopoverTrigger>
-              <Link
-                p={2}
-                href={navItem.href ?? '#'}
-                fontSize={'sm'}
-                fontWeight={500}
-                color={linkColor}
-                _hover={{
-                  textDecoration: 'none',
-                  color: linkHoverColor,
-                }}
-              >
-                {navItem.label}
-              </Link>
-            </PopoverTrigger>
-          </Popover>
+          <Link href={navItem.href ?? '#'}>
+            <ChakraLink
+              p={2}
+              fontSize={'sm'}
+              fontWeight={600}
+              color={'white'}
+              _hover={{
+                textDecoration: 'none',
+                color: 'whiteAlpha.700',
+              }}
+            >
+              {navItem.label}
+            </ChakraLink>
+          </Link>
         </Box>
       ))}
-    </Stack>
-  );
-};
-
-const MobileNav = () => {
-  return (
-    <Stack p={4} display={{ md: 'none' }}>
-      {NAV_ITEMS.map((navItem) => (
-        <MobileNavItem key={navItem.label} {...navItem} />
-      ))}
-    </Stack>
-  );
-};
-
-const MobileNavItem = ({ label, children, href }: NavItem) => {
-  const { onToggle } = useDisclosure();
-
-  return (
-    <Stack spacing={4} onClick={children && onToggle}>
-      <Flex
-        py={2}
-        as={Link}
-        href={href ?? '#'}
-        justify={'space-between'}
-        align={'center'}
-        _hover={{
-          textDecoration: 'none',
-        }}
-      >
-        <Text fontWeight={600} color={useColorModeValue('gray.600', 'gray.200')}>
-          {label}
-        </Text>
-      </Flex>
     </Stack>
   );
 };
@@ -157,52 +154,3 @@ const NAV_ITEMS: Array<NavItem> = [
     href: '/all-projects',
   },
 ];
-
-// import React, { useRef } from 'react';
-// import classNames from 'classnames';
-// import { useSidebar } from '../../hooks/useSideBar';
-// import Link from 'next/link';
-
-// export default function Header() {
-//   const sideBarRef = useRef(null);
-//   let { isOpen, open, close } = useSidebar(sideBarRef);
-//   return (
-//     <div>
-//       <header>
-//         <nav className={classNames('navigation', { 'navigation--open': isOpen })}>
-//           <button className="navigation__toggle" onClick={() => open()}>
-//             <img src="/images/icons/burger-menu.svg" alt="Burger" />
-//           </button>
-//           <div className="navigation__logo">
-//             <Link href="/">
-//               <img src="/images/logo_new.svg" alt="Logotype" />
-//             </Link>
-//           </div>
-//           <button className="navigation__close" onClick={() => close()}>
-//             <img src="/images/icons/close.svg" alt="Close" />
-//           </button>
-//           <ul ref={sideBarRef} className="navigation-list">
-//             <li className="navigation-list__item">
-//               <a
-//                 href="https://ergoplatform.org/en/blog/2020-12-08-ergo-headless-dapp-framework-now-available/"
-//                 target="_blank"
-//                 className="navigation-list__link"
-//               >
-//                 About DApp Framework
-//               </a>
-//             </li>
-//             <li className="navigation-list__item">
-//               <a
-//                 href="https://github.com/ergoplatform/sigmaverse"
-//                 target="_blank"
-//                 className="button"
-//               >
-//                 Add New DApp
-//               </a>
-//             </li>
-//           </ul>
-//         </nav>
-//       </header>
-//     </div>
-//   );
-// }

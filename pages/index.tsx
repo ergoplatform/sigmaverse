@@ -1,4 +1,4 @@
-import { Box, Container, Divider } from '@chakra-ui/react';
+import { Box, Container } from '@chakra-ui/react';
 import { GetStaticProps } from 'next';
 import React from 'react';
 import Carousel from '../components/Carousel/Carousel';
@@ -12,15 +12,21 @@ import { getCarouselItems } from '../utils/getCarouselItems';
 const Home = ({ carouselItems }: any) => {
   return (
     <Box>
-      <Container maxW={'6xl'} className="container">
+      <div className="landing-toplayer"></div>
+      <div className="landing-center"></div>
+      <div className="landing-centerlayer"></div>
+      <div className="landing-bottom_second"></div>
+      <div className="landing-bottom_first"></div>
+      <Container maxW={'6xl'} className="container" position={'relative'} zIndex={10}>
         <Header />
         <Hero />
-        <Divider />
         <About />
         <Carousel carouselItems={carouselItems} />
         <Discover />
       </Container>
-      <Footer />
+      <Box zIndex={10} position="relative">
+        <Footer />
+      </Box>
     </Box>
   );
 };

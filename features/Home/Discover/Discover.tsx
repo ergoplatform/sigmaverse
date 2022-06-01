@@ -1,25 +1,32 @@
-import { Box, Button, Heading, Stack, Text } from '@chakra-ui/react';
+import { Button, Heading, Stack, Text } from '@chakra-ui/react';
+import Link from 'next/link';
 import React from 'react';
 
-type Props = {};
-
-const Discover = (props: Props) => {
+const Discover = () => {
   return (
-    <Stack spacing={8} py={36} align={'center'} display={{ base: 'none', md: 'flex' }}>
-      <Stack spacing={4} align={'center'}>
+    <Stack
+      spacing={8}
+      py={{ base: 20, md: 36 }}
+      align={'center'}
+      display={{ base: 'flex', md: 'flex' }}
+    >
+      <Stack spacing={4} align={'center'} textAlign={{ base: 'center', md: 'left' }}>
+        <img src="images/icons/discover.svg" alt="" />
         <Heading>Discover more Projects</Heading>
         <Text>We have more projects to show and a lot more in development.</Text>
       </Stack>
-      <Button
-        size={'lg'}
-        bg="purple.400"
-        color="white"
-        colorScheme={'purple'}
-        fontWeight={'600'}
-        px={6}
-      >
-        Browse All Projects
-      </Button>
+      <Link href="/all-projects">
+        <Button
+          size={'lg'}
+          bg="white"
+          color="black"
+          colorScheme={'white'}
+          fontWeight={'600'}
+          px={6}
+        >
+          Browse All Projects
+        </Button>
+      </Link>
     </Stack>
   );
 };

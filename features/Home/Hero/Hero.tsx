@@ -1,99 +1,11 @@
-import {
-  Container,
-  Stack,
-  Flex,
-  Box,
-  Heading,
-  Text,
-  Button,
-  Image,
-  Icon,
-  IconProps,
-} from '@chakra-ui/react';
+import { Stack, Flex, Box, Heading, Button, Image, Icon, IconProps } from '@chakra-ui/react';
 import { FaPlus } from 'react-icons/fa';
 
 export default function Hero() {
   return (
-    <Stack
-      align={{ base: 'center', md: 'center' }}
-      spacing={{ base: 8, md: 10 }}
-      py={{ base: 16, md: 28 }}
-      pt={{ base: 10, md: 28 }}
-      direction={{ base: 'column', md: 'row' }}
-    >
-      <Stack flex={1}>
-        <Heading fontWeight={700} fontSize="lg" textAlign={{ base: 'center', md: 'initial' }}>
-          Welcome to Sigmaverse
-        </Heading>
-        <Stack spacing={{ base: 5, md: 10 }}>
-          <Heading
-            lineHeight={1.1}
-            fontWeight={600}
-            fontSize={{ base: '4xl', sm: '4xl', lg: '6xl' }}
-            textAlign={{ base: 'center', md: 'initial' }}
-            mt={0}
-          >
-            <Text
-              as={'span'}
-              position={'relative'}
-              _after={{
-                content: "''",
-                width: 'full',
-                height: '30%',
-                position: 'absolute',
-                bottom: 1,
-                left: 0,
-                bg: '',
-                zIndex: -1,
-              }}
-              style={{
-                background: 'linear-gradient(90deg, #C881FF 0%, #4BC9FF 91.59%)',
-                backgroundClip: 'text',
-                '-webkit-background-clip': 'text',
-                '-webkit-text-fill-color': 'transparent',
-              }}
-            >
-              Your portal to the
-            </Text>
-            <br />
-            <Text
-              as={'span'}
-              style={{
-                background: 'linear-gradient(90deg, #C881FF 0%, #4BC9FF 91.59%)',
-                backgroundClip: 'text',
-                '-webkit-background-clip': 'text',
-                '-webkit-text-fill-color': 'transparent',
-              }}
-            >
-              Ergo universe
-            </Text>
-          </Heading>
-          <Stack spacing={{ base: 4, sm: 6 }} direction={{ base: 'column', sm: 'row' }}>
-            <Button
-              size={'lg'}
-              bg="purple.400"
-              color="white"
-              colorScheme={'purple'}
-              fontWeight={'600'}
-              px={6}
-            >
-              Browse All Projects
-            </Button>
-            <Button
-              size={'lg'}
-              colorScheme="gray"
-              variant="outline"
-              fontWeight={'600'}
-              px={6}
-              leftIcon={<FaPlus />}
-            >
-              Add your dApp
-            </Button>
-          </Stack>
-        </Stack>
-      </Stack>
+    <Stack py={{ base: 16, md: 28 }} pt={{ base: 10, md: 28 }}>
       <Flex
-        display={{ base: 'none', md: 'block' }}
+        display={{ base: 'flex', md: 'none' }}
         flex={1}
         justify={'center'}
         align={'center'}
@@ -102,9 +14,9 @@ export default function Hero() {
       >
         <Box
           position={'relative'}
-          height={'360px'}
+          height={'180px'}
           rounded={'2xl'}
-          width={'full'}
+          width={'150px'}
           overflow={'hidden'}
         >
           <Image
@@ -113,10 +25,87 @@ export default function Hero() {
             align={'center'}
             w={'100%'}
             h={'100%'}
-            src="/images/landing_header.png"
+            src="/images/ergonaut.svg"
           />
         </Box>
       </Flex>
+      <Stack
+        align={{ base: 'center', md: 'center' }}
+        spacing={{ base: 2, md: 10 }}
+        direction={{ base: 'column', md: 'row' }}
+      >
+        <Stack flex={1} spacing={{ base: 2 }}>
+          <Heading
+            fontWeight={700}
+            fontSize="18px"
+            textTransform={'uppercase'}
+            letterSpacing="0.1em"
+            textAlign={{ base: 'center', md: 'initial' }}
+          >
+            Welcome to Sigmaverse
+          </Heading>
+          <Stack spacing={{ base: 8, md: 10 }}>
+            <Heading
+              lineHeight={1.2}
+              fontWeight={700}
+              fontSize={{ base: '4xl', sm: '4xl', lg: '64px' }}
+              textAlign={{ base: 'center', md: 'initial' }}
+              mt={0}
+            >
+              Your portal to the
+              <br />
+              Ergo universe
+            </Heading>
+            <Stack spacing={{ base: 4, sm: 6 }} direction={{ base: 'column', sm: 'row' }}>
+              <Button
+                size={'lg'}
+                color="black"
+                bg="white"
+                colorScheme={'white'}
+                fontWeight={'600'}
+                px={6}
+              >
+                Browse All Projects
+              </Button>
+              <Button
+                size={'lg'}
+                colorScheme="white"
+                variant="outline"
+                fontWeight={'600'}
+                px={6}
+                leftIcon={<FaPlus />}
+              >
+                Add your dApp
+              </Button>
+            </Stack>
+          </Stack>
+        </Stack>
+        <Flex
+          display={{ base: 'none', md: 'flex' }}
+          flex={1}
+          justify={'flex-end'}
+          align={'center'}
+          position={'relative'}
+          w={'full'}
+        >
+          <Box
+            position={'relative'}
+            height={'393px'}
+            rounded={'2xl'}
+            width={'317px'}
+            overflow={'hidden'}
+          >
+            <Image
+              alt={'Hero Image'}
+              fit={'cover'}
+              align={'center'}
+              w={'100%'}
+              h={'100%'}
+              src="/images/ergonaut.svg"
+            />
+          </Box>
+        </Flex>
+      </Stack>
     </Stack>
   );
 }

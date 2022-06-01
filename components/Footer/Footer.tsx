@@ -8,10 +8,10 @@ import {
   useColorModeValue,
   VisuallyHidden,
 } from '@chakra-ui/react';
-import { FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
+import { FaTwitter } from 'react-icons/fa';
 import { ReactNode } from 'react';
 
-const Logo = (props: any) => {
+const Logo = () => {
   return <img src="/images/logo_new.svg" alt="Logotype" />;
 };
 
@@ -58,11 +58,7 @@ export default function Footer() {
         </Stack>
       </Container>
 
-      <Box
-        borderTopWidth={1}
-        borderStyle={'solid'}
-        borderColor={useColorModeValue('gray.200', 'gray.700')}
-      >
+      <Box borderTopWidth={1} borderStyle={'solid'} borderColor={'white'}>
         <Container
           as={Stack}
           maxW={'6xl'}
@@ -74,14 +70,8 @@ export default function Footer() {
         >
           <Text>© 2022 Sigmaverse. All rights reserved</Text>
           <Stack direction={'row'} spacing={6}>
-            <SocialButton label={'Twitter'} href={'#'}>
+            <SocialButton label={'Twitter'} href={'https://mobile.twitter.com/sigmaverse_ergo'}>
               <FaTwitter />
-            </SocialButton>
-            <SocialButton label={'YouTube'} href={'#'}>
-              <FaYoutube />
-            </SocialButton>
-            <SocialButton label={'Instagram'} href={'#'}>
-              <FaInstagram />
             </SocialButton>
           </Stack>
         </Container>

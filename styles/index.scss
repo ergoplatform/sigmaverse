@@ -105,6 +105,112 @@ li {
   animation: animate-ergonaut 1.5s ease-out 0.25s both , animate-ergonaut-plane infinite ease-out 1.75s alternate ;
 }
 
+.landing-toplayer {
+  background: url('/images/group1.svg') no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 6;
+}
+
+.landing-center {
+  background: linear-gradient(90deg, #5437F4 0%, #7E66F5 100%);
+  background-size: contain;
+  width: 100%;
+  height: 925px;
+  position: absolute;
+  z-index: 5;
+}
+
+.landing-centerlayer {
+  background: url('/images/group2.svg') no-repeat;
+  top: 500px;
+  background-size: contain;
+  width: 100%;
+  height: 1100px;
+  position: absolute;
+  z-index: 5;
+}
+
+.landing-bottom_first {
+  background: url('/images/group4.svg') no-repeat;
+  bottom: 0px;
+  background-size: contain;
+  width: 100%;
+  height: 900px;
+  position: absolute;
+  z-index: 5;
+}
+
+.landing-bottom_second {
+  background:  url('/images/group3.svg') no-repeat, linear-gradient(90deg, #5437F4 0%, #7E66F5 100%);
+  bottom: 0;
+  background-size: contain;
+  background-position: bottom;
+  width: 100%;
+  height: 600px;
+  position: absolute;
+  z-index: 5;
+}
+
+
+@media (min-width: 1600px) {
+  .landing-centerlayer {
+    height: 1100px;
+  }
+
+  .landing-bottom_first {
+    height: 1000px;
+  }
+
+  .landing-bottom_second {
+    height: 650px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .landing-center {
+    height: 650px;
+  }
+
+  .landing-centerlayer {
+    height: 0;
+  }
+
+  .landing-bottom_first {
+    height: 0;
+  }
+
+  .landing-bottom_second {
+    height: 250px;
+  }
+}
+
+@media (max-width: 767px) {
+  .landing-center {
+    height: 580px;
+  }
+
+  .landing-centerlayer {
+    height: 0;
+  }
+
+  .landing-bottom_first {
+    height: 0;
+  }
+
+  .landing-bottom_second {
+    height: 240px;
+  }
+}
+
+@media (max-width: 480px) {
+  .landing-center {
+    height: 650px;
+  }
+}
+
 @keyframes animate-introduce {
   0% {
     opacity: 0;

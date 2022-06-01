@@ -15,10 +15,11 @@ export default function About() {
   return (
     <Grid
       templateColumns={{ base: '1fr', md: 'repeat(10, 1fr)' }}
-      gap={{ base: 16, md: 16 }}
+      gap={{ base: 10, md: 16 }}
       mb={{ base: 10, md: 0 }}
+      mt={{ base: 20, md: 0 }}
     >
-      <GridItem colSpan={{ base: 0, md: 4 }}>
+      <GridItem colSpan={{ base: 1, md: 4 }}>
         <Stack
           align={'center'}
           spacing={{ base: 8, md: 10 }}
@@ -31,9 +32,15 @@ export default function About() {
             align={'center'}
             position={'relative'}
             w={'full'}
-            display={{ base: 'none', md: 'flex' }}
+            display={'flex'}
           >
-            <Box position={'relative'} rounded={'2xl'} width={'full'} overflow={'hidden'}>
+            <Box
+              position={'relative'}
+              rounded={'2xl'}
+              width={{ base: '180px', md: 'full' }}
+              display={{ base: 'flex', md: 'block' }}
+              overflow={'hidden'}
+            >
               <Image
                 alt={'Hero Image'}
                 fit={'cover'}
@@ -63,17 +70,17 @@ export default function About() {
               >
                 About Sigmaverse
               </Heading>
-              <Text fontSize={{ base: 'sm', md: 'lg' }} color="whiteAlpha.700">
+              <Text fontSize={{ base: 'md', md: 'lg' }} color="whiteAlpha.700">
                 Ergo has amazing tech and talented developers. However, as a decentralised and
                 community-powered platform, it’s not always easy to know what’s going on all the
                 time.
               </Text>
-              <Text fontSize={{ base: 'sm', md: 'lg' }} color="whiteAlpha.700">
+              <Text fontSize={{ base: 'md', md: 'lg' }} color="whiteAlpha.700">
                 Different people are developing different dApps and use cases, formally and
                 informally. Connecting them to the same users and building that all-important DeFi
                 network effect isn’t always easy.
               </Text>
-              <Text fontSize={{ base: 'sm', md: 'lg' }} color="whiteAlpha.700">
+              <Text fontSize={{ base: 'md', md: 'lg' }} color="whiteAlpha.700">
                 Sigmaverse is a one-stop portal to the Ergo dApp ecosystem: a place where users can
                 find all the cool functionality that community developers are building on Ergo, all
                 in one place.
