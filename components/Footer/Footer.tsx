@@ -12,7 +12,7 @@ import { FaTwitter } from 'react-icons/fa';
 import { ReactNode } from 'react';
 
 const Logo = () => {
-  return <img src="/images/logo_new.svg" alt="Logotype" />;
+  return <img src="/images/logo_new2.svg" alt="Logotype" />;
 };
 
 const SocialButton = ({
