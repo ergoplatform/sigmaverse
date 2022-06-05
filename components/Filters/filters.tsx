@@ -5,7 +5,6 @@ export default function Filters({ filter, setFilter }: any) {
 
   return (
     <div className="filter">
-      <h1>Explore the universe of Sigmaverse</h1>
       <div className="filter__container">
         <button
           className="left_button"

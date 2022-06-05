@@ -3,13 +3,14 @@
 .navigation {
   display: flex;
   align-items: center;
-  padding: 23px 0;
+  padding: 16px 0;
 
   .navigation__logo {
     width: 132px;
     min-width: 132px;
     height: 40px;
     margin: 0 auto;
+    cursor: pointer;
 
     img {
       width: 100%;
@@ -46,7 +47,7 @@
       width: 340px;
       transition: left 250ms ease-in-out;
       overflow-y: scroll;
-      padding: 75px 25px 0 25px;
+      padding: 125px 25px 0 25px;
       z-index: 1020;
 
       &::-webkit-scrollbar-track {
@@ -63,6 +64,10 @@
 
       &__item {
         width: 100%;
+
+        & + .navigation-list__item {
+          margin-top: 16px;
+        }
 
         &:nth-child(2) {
           margin-left: 0;

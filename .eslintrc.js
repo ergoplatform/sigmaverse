@@ -1,6 +1,6 @@
 module.exports = {
   parser: '@typescript-eslint/parser',
-  extends: ['plugin:prettier/recommended', 'prettier/react'],
+  extends: ['plugin:prettier/recommended', 'prettier'],
   env: {
     browser: true,
     jest: true,
