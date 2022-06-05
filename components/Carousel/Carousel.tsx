@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react';
+import React, { useState } from 'react';
 import classNames from 'classnames';
 import { Swiper as ReactSwiper, SwiperSlide } from 'swiper/react';
 import Swiper, { Autoplay, EffectFade, Thumbs } from 'swiper';

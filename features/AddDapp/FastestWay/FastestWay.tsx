@@ -18,20 +18,8 @@ const FastestWay = () => {
       </Stack>
       <Stack spacing={{ base: 6, md: 10 }} direction={{ base: 'column', md: 'row' }}>
         <Stack spacing={{ base: 4, md: 0 }}>
-          <Text
-            style={{
-              background: 'linear-gradient(90deg, #D56AFB 0%, #8D4EF5 91.59%)',
-              '-webkit-background-clip': 'text',
-              '-webkit-text-fill-color': 'transparent',
-              backgroundClip: 'text',
-              textFillColor: 'transparent',
-            }}
-            textTransform="uppercase"
-            fontSize={'18px'}
-            letterSpacing="0.1em"
-            fontWeight={700}
-          >
-            Get started
+          <Text textTransform="uppercase" fontSize={'18px'} letterSpacing="0.1em" fontWeight={700}>
+            <span className="text-fill">Get started</span>
           </Text>
           <Heading fontSize={{ base: '3xl', md: '4xl' }}>
             Create a Fork of ergoplatform/sigmaverse
