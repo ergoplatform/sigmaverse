@@ -11,7 +11,7 @@ const Done = () => {
       display={{ base: 'flex', md: 'flex' }}
     >
       <Stack spacing={4} align={'center'} textAlign={{ base: 'center', md: 'left' }}>
-        <img src="images/Checkmark.svg" alt="" />
+        <img src="/images/Checkmark.svg" alt="" />
         <Heading>And you're done, congrats!</Heading>
         <Text>
           After your pull request will be reviewed and approved, your dApp will be placed in

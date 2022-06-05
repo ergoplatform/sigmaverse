@@ -11,7 +11,7 @@ const FastestWay = () => {
       display={{ base: 'flex', md: 'flex' }}
     >
       <Stack spacing={4} align={'center'} textAlign={{ base: 'center', md: 'left' }}>
-        <img src="images/Upload.svg" alt="" />
+        <img src="/images/Upload.svg" alt="" />
         <Heading textAlign={'center'} fontSize={{ base: '3xl', md: '5xl' }} maxWidth={'700px'}>
           The fastest way to add your dApp via Github
         </Heading>

@@ -11,7 +11,7 @@ const Discover = () => {
       display={{ base: 'flex', md: 'flex' }}
     >
       <Stack spacing={4} align={'center'} textAlign={{ base: 'center', md: 'left' }}>
-        <img src="images/icons/discover.svg" alt="" />
+        <img src="/images/icons/discover.svg" alt="" />
         <Heading>Discover more Projects</Heading>
         <Text>We have more projects to show and a lot more in development.</Text>
       </Stack>
