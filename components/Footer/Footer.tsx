@@ -55,6 +55,7 @@ export default function Footer() {
         <Stack direction={'row'} spacing={6}>
           <Link href={'/'}>Home</Link>
           <Link href={'/all-projects'}>Browse Projects</Link>
+          <Link href={'/add-dapp'}>Add your dApp</Link>
         </Stack>
       </Container>
 

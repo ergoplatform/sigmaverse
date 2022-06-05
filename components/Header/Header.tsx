@@ -5,13 +5,14 @@ import {
   Link as ChakraLink,
   useColorModeValue,
   Box,
-  Collapse,
+  Button,
 } from '@chakra-ui/react';
 
 import React, { useRef } from 'react';
 import classNames from 'classnames';
 import { useSidebar } from '../../hooks/useSideBar';
 import Link from 'next/link';
+import { FaPlus } from 'react-icons/fa';
 
 export default function Header() {
   const sideBarRef = useRef(null);
@@ -36,22 +37,23 @@ export default function Header() {
             </Flex>
           </Flex>
 
-          {/* <Stack flex={{ base: 1, md: 0 }} justify={'flex-end'} direction={'row'} spacing={6}>
-          <Button
-            display={{ base: 'none', md: 'inline-flex' }}
-            fontSize={'sm'}
-            fontWeight={600}
-            color={'white'}
-            bg={'purple.400'}
-            href={'#'}
-            _hover={{
-              bg: 'purple.300',
-            }}
-            leftIcon={<FaPlus />}
-          >
-            Add your dApp
-          </Button>
-        </Stack> */}
+          <Stack flex={{ base: 1, md: 0 }} justify={'flex-end'} direction={'row'} spacing={6}>
+            <Link href={'/add-dapp'}>
+              <Button
+                display={{ base: 'none', md: 'inline-flex' }}
+                fontSize={'sm'}
+                fontWeight={600}
+                color={'black'}
+                bg={'white'}
+                _hover={{
+                  bg: 'purple.300',
+                }}
+                leftIcon={<FaPlus />}
+              >
+                Add your dApp
+              </Button>
+            </Link>
+          </Stack>
         </Flex>
       </Box>
 

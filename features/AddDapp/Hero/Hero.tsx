@@ -1,41 +1,27 @@
-import { Stack, Flex, Box, Heading, Button, Image, Icon, IconProps } from '@chakra-ui/react';
+import {
+  Stack,
+  Link as CharkaLink,
+  Flex,
+  Box,
+  Heading,
+  Button,
+  Image,
+  Icon,
+  IconProps,
+  Text,
+} from '@chakra-ui/react';
 import Link from 'next/link';
-import { FaPlus } from 'react-icons/fa';
+import { FaGithub } from 'react-icons/fa';
 
 export default function Hero() {
   return (
-    <Stack py={{ base: 16, md: 28 }} pt={{ base: 10, md: 28 }}>
-      <Flex
-        display={{ base: 'flex', md: 'none' }}
-        flex={1}
-        justify={'center'}
-        align={'center'}
-        position={'relative'}
-        w={'full'}
-      >
-        <Box
-          position={'relative'}
-          height={'180px'}
-          rounded={'2xl'}
-          width={'150px'}
-          overflow={'hidden'}
-        >
-          <Image
-            alt={'Hero Image'}
-            fit={'cover'}
-            align={'center'}
-            w={'100%'}
-            h={'100%'}
-            src="/images/ergonaut.svg"
-          />
-        </Box>
-      </Flex>
+    <Stack py={{ base: 16, md: 10 }} pt={{ base: 10, md: 20 }}>
       <Stack
-        align={{ base: 'center', md: 'center' }}
+        align={{ base: 'center', md: 'flex-start' }}
         spacing={{ base: 2, md: 10 }}
         direction={{ base: 'column', md: 'row' }}
       >
-        <Stack flex={1} spacing={{ base: 2 }}>
+        <Stack flex={1} spacing={{ base: 3 }} pt={{ base: 4, md: 14 }}>
           <Heading
             fontWeight={700}
             fontSize="18px"
@@ -43,21 +29,36 @@ export default function Hero() {
             letterSpacing="0.1em"
             textAlign={{ base: 'center', md: 'initial' }}
           >
-            Welcome to Sigmaverse
+            Become a part of our community
           </Heading>
           <Stack spacing={{ base: 8, md: 10 }}>
-            <Heading
-              lineHeight={1.2}
-              fontWeight={700}
-              fontSize={{ base: '4xl', sm: '4xl', lg: '64px' }}
-              textAlign={{ base: 'center', md: 'initial' }}
-              mt={0}
+            <Stack spacing={{ base: 8, md: 6 }}>
+              <Heading
+                lineHeight={1.2}
+                fontWeight={700}
+                fontSize={{ base: '5xl', lg: '64px' }}
+                textAlign={{ base: 'center', md: 'initial' }}
+                mt={0}
+              >
+                Add your dApp
+              </Heading>
+              <Text
+                fontSize={{ base: 'md', md: 'lg' }}
+                color="whiteAlpha.700"
+                textAlign={{ base: 'center', md: 'left' }}
+              >
+                We have a step-by-step guide for non tech-savvy users of how to do the dapp
+                submition. Just user follow the instructions down below. It's really simple. Pro
+                users can jump directly to Sigmaverse's Github repo.
+              </Text>
+            </Stack>
+            <Stack
+              spacing={{ base: 4, sm: 6 }}
+              direction={{ base: 'column', md: 'row' }}
+              display="flex"
+              justifyContent={{ base: 'center', md: 'flex-start' }}
+              align={{ base: 'center', md: 'flex-start' }}
             >
-              Your portal to the
-              <br />
-              Ergo universe
-            </Heading>
-            <Stack spacing={{ base: 4, sm: 6 }} direction={{ base: 'column', sm: 'row' }}>
               <Link href="/all-projects">
                 <Button
                   size={'lg'}
@@ -70,18 +71,19 @@ export default function Hero() {
                   Browse All Projects
                 </Button>
               </Link>
-              <Link href="/add-dapp">
-                <Button
-                  size={'lg'}
-                  colorScheme="white"
-                  variant="outline"
-                  fontWeight={'600'}
-                  px={6}
-                  leftIcon={<FaPlus />}
-                >
-                  Add your dApp
-                </Button>
-              </Link>
+              <Button
+                as="a"
+                href="https://github.com/ergoplatform/sigmaverse"
+                target="_blank"
+                size={'lg'}
+                colorScheme="white"
+                variant="outline"
+                fontWeight={'600'}
+                px={6}
+                leftIcon={<FaGithub />}
+              >
+                Jump to Github
+              </Button>
             </Stack>
           </Stack>
         </Stack>
@@ -95,9 +97,9 @@ export default function Hero() {
         >
           <Box
             position={'relative'}
-            height={'393px'}
+            height={'553px'}
             rounded={'2xl'}
-            width={'317px'}
+            width={'264px'}
             overflow={'hidden'}
           >
             <Image
@@ -106,7 +108,7 @@ export default function Hero() {
               align={'center'}
               w={'100%'}
               h={'100%'}
-              src="/images/ergonaut.svg"
+              src="/images/Rocket.svg"
             />
           </Box>
         </Flex>
