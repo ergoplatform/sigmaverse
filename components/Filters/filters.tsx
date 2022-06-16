@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+import { categories } from '../../config/categories';
 
 export default function Filters({ filter, setFilter }: any) {
   const ref = useRef<any>();
@@ -13,19 +14,7 @@ export default function Filters({ filter, setFilter }: any) {
           }}
         />
         <div className="filter-item" ref={ref}>
-          {[
-            'All',
-            'dApps',
-            'Privacy',
-            'NFTs',
-            'Metaverse',
-            'Explore',
-            'Mining',
-            'Tooling',
-            'Tokens',
-            'Wallets',
-            'Dev Tools',
-          ].map((e) => (
+          {categories.map((e) => (
             <div
               key={e}
               className={e == filter ? 'filter-item__active' : 'filter-item__tag'}

@@ -8,7 +8,7 @@ import {
   Stack,
 } from '@chakra-ui/react';
 import { GetStaticProps } from 'next';
-import React, { useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import Dapps from '../components/Dapps/Dapps';
 import Filters from '../components/Filters/filters';
 import Footer from '../components/Footer/Footer';
@@ -16,6 +16,8 @@ import Header from '../components/Header/Header';
 import Fuse from 'fuse.js';
 import { getApplcations } from '../utils/getApplications';
 import { SearchIcon } from '@chakra-ui/icons';
+import qs from 'query-string';
+import { categories } from '../config/categories';
 
 const fuseOptions = {
   shouldSort: true,
@@ -27,8 +29,19 @@ const fuseOptions = {
 };
 
 const AllProjects = ({ applications }: any) => {
-  const [searchedValue, setSearchedValue] = useState<string>('');
+  const [pageLoaded, setPageLoaded] = useState(false);
   const [filter, setFilter] = useState<string>('All');
+
+  useEffect(() => {
+    setPageLoaded(true);
+
+    const { category = 'All' } = qs.parse(location.search);
+    setFilter(
+      categories.find((value) => value.toLowerCase() === String(category).toLowerCase()) || 'All',
+    );
+  }, []);
+
+  const [searchedValue, setSearchedValue] = useState<string>('');
 
   const fuse = useMemo(() => new Fuse(applications, fuseOptions), [applications]);
   const searchedApplications = useMemo(
@@ -37,6 +50,10 @@ const AllProjects = ({ applications }: any) => {
   );
 
   const data = searchedValue ? searchedApplications : applications;
+
+  if (!pageLoaded) {
+    return null;
+  }
 
   return (
     <Box>
