@@ -8,7 +8,7 @@ import {
   Stack,
 } from '@chakra-ui/react';
 import { GetStaticProps } from 'next';
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import Dapps from '../components/Dapps/Dapps';
 import Filters from '../components/Filters/filters';
 import Footer from '../components/Footer/Footer';
@@ -32,11 +32,21 @@ const AllProjects = ({ applications }: any) => {
   const [pageLoaded, setPageLoaded] = useState(false);
   const [filter, setFilter] = useState<string>('All');
 
+  const setCategory = useCallback(
+    (category) => {
+      setFilter(category);
+
+      const newurl = qs.stringifyUrl({ url: location.search, query: { category } });
+      window.history.pushState({ path: newurl }, '', newurl);
+    },
+    [setFilter],
+  );
+
   useEffect(() => {
     setPageLoaded(true);
 
     const { category = 'All' } = qs.parse(location.search);
-    setFilter(
+    setCategory(
       categories.find((value) => value.toLowerCase() === String(category).toLowerCase()) || 'All',
     );
   }, []);
@@ -78,7 +88,7 @@ const AllProjects = ({ applications }: any) => {
             </Box>
           </Stack>
         </Box>
-        <Filters filter={filter} setFilter={setFilter} />
+        <Filters filter={filter} setCategory={setCategory} />
         <div className="dapps">
           <Dapps data={data} filter={filter} />
         </div>

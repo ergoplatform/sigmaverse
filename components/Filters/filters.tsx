@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import { categories } from '../../config/categories';
 
-export default function Filters({ filter, setFilter }: any) {
+export default function Filters({ filter, setCategory }: any) {
   const ref = useRef<any>();
 
   return (
@@ -18,7 +18,7 @@ export default function Filters({ filter, setFilter }: any) {
             <div
               key={e}
               className={e == filter ? 'filter-item__active' : 'filter-item__tag'}
-              onClick={() => setFilter(e)}
+              onClick={() => setCategory(e)}
             >
               {e}
             </div>
