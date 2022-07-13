@@ -6,5 +6,5 @@ website: https://www.ergolend.org/
 logo_image: exle-logo.png
 preview_image: exle-preview.png
 category: dApps
-date: 2022-07-13T22:00:44.267Z
+date: 2022-07-13T22:02:59.940Z
 ---
