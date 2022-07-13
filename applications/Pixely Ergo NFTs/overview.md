@@ -5,4 +5,5 @@ website: https://www.pixelyergo.com/
 logo_image: pixely-ergo-logo-black.png
 preview_image: pixely-ergo-website-background.jpg
 category: NFTs
+date: 
 ---
