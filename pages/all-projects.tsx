@@ -17,7 +17,7 @@ import Fuse from 'fuse.js';
 import { getApplcations } from '../utils/getApplications';
 import { SearchIcon } from '@chakra-ui/icons';
 import qs from 'query-string';
-import { categories } from '../config/categories';
+import { useCategories } from '../components/AllProjects/hooks/useCategories';
 
 const fuseOptions = {
   shouldSort: true,
@@ -31,6 +31,7 @@ const fuseOptions = {
 const AllProjects = ({ applications }: any) => {
   const [pageLoaded, setPageLoaded] = useState(false);
   const [filter, setFilter] = useState<string>('All');
+  const { data: categories } = useCategories();
 
   const setCategory = useCallback(
     (category) => {
@@ -88,7 +89,7 @@ const AllProjects = ({ applications }: any) => {
             </Box>
           </Stack>
         </Box>
-        <Filters filter={filter} setCategory={setCategory} />
+        <Filters filter={filter} setCategory={setCategory} categories={categories} />
         <div className="dapps">
           <Dapps data={data} filter={filter} />
         </div>
