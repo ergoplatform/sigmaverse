@@ -2,7 +2,7 @@ import React, { useMemo } from 'react';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import DappsCard from './DappsCard';
 
-export default function Dapps({ projects, size, setSize, filter }: any) {
+export default function Dapps({ projects, size, setSize }: any) {
   const transformedData = useMemo(
     () => projects?.reduce((acc: any, responses: any) => [...acc, ...responses.data], []) || [],
     [projects],
