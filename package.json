@@ -21,6 +21,7 @@
     "framer-motion": "^6.3.3",
     "fuse.js": "^6.6.2",
     "gray-matter": "^4.0.3",
+    "lodash": "^4.17.21",
     "next": "^12.2.5",
     "normalize.css": "^8.0.1",
     "qs": "^6.11.0",

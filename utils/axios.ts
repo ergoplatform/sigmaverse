@@ -1,6 +1,7 @@
 import axios from 'axios';
 
-export const BACKEND_API = process.env.NEXT_PUBLIC_STRAPI_API;
+export const BACKEND_URL = process.env.NEXT_PUBLIC_STRAPI_API;
+export const BACKEND_API = `${BACKEND_URL}/api`;
 
 export const websiteBackendApi = axios.create({
   timeout: 1000 * 5,
@@ -10,4 +11,5 @@ export const websiteBackendApi = axios.create({
   },
 });
 
-export const axiosGetFetcher = (url: string) => websiteBackendApi.get(url).then((res) => res.data);
+export const axiosGetFetcher = (url: string, options: any) =>
+  websiteBackendApi.get(url, options).then((res) => res.data);

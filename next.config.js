@@ -10,6 +10,9 @@ const nextConfig = {
     includePaths: [path.join(__dirname, 'styles')],
   },
   trailingSlash: true,
+  images: {
+    domains: ['sigma-admin.ergoplatform.com'],
+  },
 }
 
 module.exports = withSourceMaps(nextConfig);

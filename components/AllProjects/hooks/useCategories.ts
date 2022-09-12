@@ -5,7 +5,7 @@ import useSWR from 'swr';
 import { useMemo } from 'react';
 
 export const useCategories = () => {
-  const { data } = useSWR(() => {
+  const { data, isValidating } = useSWR(() => {
     const query = qs.stringify(
       {
         populate: '*',
@@ -27,5 +27,6 @@ export const useCategories = () => {
 
   return {
     data: ['All', ...omittedData],
+    isValidating,
   };
 };

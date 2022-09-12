@@ -1,27 +1,24 @@
-import React from 'react';
+import React, { useMemo } from 'react';
+import InfiniteScroll from 'react-infinite-scroll-component';
 import DappsCard from './DappsCard';
 
-let cache: any = null;
+export default function Dapps({ projects, size, setSize, filter }: any) {
+  const transformedData = useMemo(
+    () => projects?.reduce((acc: any, responses: any) => [...acc, ...responses.data], []) || [],
+    [projects],
+  );
 
-export default function Dapps({ data, filter }: any) {
-  if (data.length === 0) {
-    return <>dApps not found</>;
-  }
-
-  if (cache === null) {
-    cache = data.reduce((acc: any, item: any) => {
-      if (acc[item.category]) {
-        acc[item.category].push(item);
-      } else {
-        acc[item.category] = [item];
-      }
-      return acc;
-    }, {});
-  }
-
-  if (filter === 'All') {
-    return <DappsCard data={data} />;
-  }
-
-  return <DappsCard data={cache[filter]} />;
+  return (
+    <div style={{ paddingBottom: '300px' }}>
+      <InfiniteScroll
+        dataLength={transformedData.length}
+        next={() => setSize(size + 1)}
+        hasMore={projects?.[0]?.meta.pagination.pageCount !== size}
+        loader={<h4>Loading...</h4>}
+        className="w-full pb-20"
+      >
+        <DappsCard data={transformedData} />
+      </InfiniteScroll>
+    </div>
+  );
 }
