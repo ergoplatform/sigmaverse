@@ -13,7 +13,7 @@ export default function Filters({ filter, categories, setCategory }: any) {
           }}
         />
         <div className="filter-item" ref={ref}>
-          {categories.map((e) => (
+          {categories.map((e: any) => (
             <div
               key={e}
               className={e == filter ? 'filter-item__active' : 'filter-item__tag'}
