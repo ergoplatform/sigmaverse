@@ -29,7 +29,11 @@ export default function Header() {
         >
           <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }} align="center">
             <Link href="/">
-              <img src="/images/logo_new2.svg" style={{ height: '40px' }} alt="Logotype" />
+              <img
+                src="/images/logo_new2.svg"
+                style={{ height: '40px', cursor: 'pointer' }}
+                alt="Logotype"
+              />
             </Link>
 
             <Flex display={{ base: 'none', md: 'flex' }} ml={10}>

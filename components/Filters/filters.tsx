@@ -1,7 +1,6 @@
 import React, { useRef } from 'react';
-import { categories } from '../../config/categories';
 
-export default function Filters({ filter, setCategory }: any) {
+export default function Filters({ filter, categories, setCategory }: any) {
   const ref = useRef<any>();
 
   return (
