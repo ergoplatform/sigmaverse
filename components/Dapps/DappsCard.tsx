@@ -1,5 +1,5 @@
 import React from 'react';
-import { BACKEND_URL } from '../../utils/axios';
+import { BACKEND_URL } from '../../api/axios';
 import styles from './Dapps.module.scss';
 
 export default function DappsCard({ data }: any) {

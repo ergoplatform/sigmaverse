@@ -1,13 +1,13 @@
 import { Box, Container } from '@chakra-ui/react';
 import { GetStaticProps } from 'next';
 import React from 'react';
+import { getCarouselItems } from '../api/getCarouselItems';
 import Carousel from '../components/Carousel/Carousel';
 import Footer from '../components/Footer/Footer';
 import Header from '../components/Header/Header';
 import About from '../features/Home/About/About';
 import Discover from '../features/Home/Discover/Discover';
 import Hero from '../features/Home/Hero/Hero';
-import { getCarouselItems } from '../utils/getCarouselItems';
 
 const Home = ({ carouselItems }: any) => {
   return (
@@ -34,10 +34,12 @@ const Home = ({ carouselItems }: any) => {
 export default Home;
 
 export const getStaticProps: GetStaticProps = async () => {
-  const carouselItems = getCarouselItems();
+  const carouselItems = await getCarouselItems();
+
   return {
     props: {
       carouselItems,
     },
+    revalidate: 3600,
   };
 };
