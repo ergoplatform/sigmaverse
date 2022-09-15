@@ -1,6 +1,6 @@
 import useSWRInfinite from 'swr/infinite';
 import { PROJECT_CARDS_METHOD } from '../../../api/methods';
-import { axiosGetFetcher } from '../../../api/axios';
+import { axiosGetFetcher } from '../../../utils/axios';
 import qs from 'qs';
 import { DEFAULT_PAGE_SIZE } from '../../../config/constants';
 import { useCallback, useEffect, useMemo, useState } from 'react';

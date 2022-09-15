@@ -10,7 +10,6 @@ import 'swiper/swiper-bundle.min.css';
 import 'swiper/swiper.min.css';
 import styles from './Carousel.module.scss';
 import { Heading } from '@chakra-ui/react';
-import { BACKEND_URL } from '../../api/axios';
 
 type Props = {
   carouselItems: any;
@@ -21,9 +20,6 @@ const Carousel = ({ carouselItems }: Props) => {
   const [swiperInstance, setSwiperInstance] = useState<any>(null);
   const [activeIndex, setActiveIndex] = useState(0);
 
-  if (!carouselItems) {
-    return null;
-  }
   return (
     <div className={styles.carousel}>
       <Heading fontWeight={700} mb={8}>
@@ -47,40 +43,30 @@ const Carousel = ({ carouselItems }: Props) => {
           swiper: thumbsSwiper,
         }}
       >
-        {carouselItems?.data.map(
-          ({
-            attributes: { carouselImage, name, logotype, projectTitle, description, website },
-          }: any) => (
-            <SwiperSlide key={projectTitle}>
-              <div className={styles.carouselItem}>
-                <img
-                  src={`${BACKEND_URL}${carouselImage?.data?.attributes?.url ?? ''}`}
-                  className={styles.carouselItem__img}
-                />
-                <div className={styles.carouselItem__content}>
-                  <div className={styles.carouselItem__logo}>
-                    <img
-                      src={`${BACKEND_URL}${logotype?.data?.attributes?.url ?? ''}`}
-                      alt={`${name} logotype`}
-                    />
-                    <span className={styles.carouselItem__name}>{name}</span>
-                  </div>
-                  <div className={styles.carouselItem__info}>
-                    <div className={styles.carouselItem__title}>{projectTitle}</div>
-                    {description ? (
-                      <div className={styles.carouselItem__description}>{description}</div>
-                    ) : null}
-                    <div className={styles.carouselItem__button}>
-                      <a href={website} target="_blank">
-                        Go to Project
-                      </a>
-                    </div>
+        {carouselItems.map(({ preview, logo, name, title, description, website }: any) => (
+          <SwiperSlide key={title}>
+            <div className={styles.carouselItem}>
+              <img src={preview} className={styles.carouselItem__img} />
+              <div className={styles.carouselItem__content}>
+                <div className={styles.carouselItem__logo}>
+                  <img src={logo} alt={`${name} logotype`} />
+                  <span className={styles.carouselItem__name}>{name}</span>
+                </div>
+                <div className={styles.carouselItem__info}>
+                  <div className={styles.carouselItem__title}>{title}</div>
+                  {description ? (
+                    <div className={styles.carouselItem__description}>{description}</div>
+                  ) : null}
+                  <div className={styles.carouselItem__button}>
+                    <a href={website} target="_blank">
+                      Go to Project
+                    </a>
                   </div>
                 </div>
               </div>
-            </SwiperSlide>
-          ),
-        )}
+            </div>
+          </SwiperSlide>
+        ))}
       </ReactSwiper>
 
       <ReactSwiper
@@ -91,7 +77,7 @@ const Carousel = ({ carouselItems }: Props) => {
         spaceBetween={30}
         allowTouchMove={false}
       >
-        {carouselItems?.data.map(({ attributes: { logotype, name, title } }: any, index: any) => (
+        {carouselItems.map(({ logo, name, title }: any, index: any) => (
           <SwiperSlide key={title}>
             <div
               className={classNames(styles.carouselThumb, {
@@ -99,10 +85,7 @@ const Carousel = ({ carouselItems }: Props) => {
               })}
             >
               <div className={styles.carouselThumb__logo}>
-                <img
-                  alt={`${name} logotype`}
-                  src={`${BACKEND_URL}${logotype?.data?.attributes?.url ?? ''}`}
-                />
+                <img src={logo} alt={`${name} logotype`} />
                 <span className={styles.carouselThumb__name}>{name}</span>
               </div>
             </div>

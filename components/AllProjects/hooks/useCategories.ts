@@ -1,5 +1,5 @@
 import { PROJECT_CATEGORIES } from '../../../api/methods';
-import { axiosGetFetcher } from '../../../api/axios';
+import { axiosGetFetcher } from '../../../utils/axios';
 import qs from 'qs';
 import useSWR from 'swr';
 import { useMemo } from 'react';
