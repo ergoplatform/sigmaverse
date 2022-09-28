@@ -1,0 +1,8 @@
+---
+name: Muumbaland
+description: Play To Earn Metaverse On Ergo
+website: https://twotens.art/
+logo_image: logo-resized.png
+preview_image: banner-resized.jpeg
+category: Metaverse
+---
