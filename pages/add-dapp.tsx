@@ -19,7 +19,7 @@ const Home = () => {
       <Container maxW={'6xl'} className="container" position={'relative'} zIndex={10}>
         <Header />
         <Hero />
-        <FastestWay />
+        {/* <FastestWay /> */}
         <PrepareImages />
         <UploadFiles />
         <Done />
