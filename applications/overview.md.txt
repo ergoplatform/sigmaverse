@@ -1,0 +1,8 @@
+---
+name: ErgClay
+description: Unique NFT collections minted exclusively on Ergo blockchain, Handcrafted works of real Clay art with a one-of-a-kind community experience, Simple claymation artwork with original clay figures.
+website: https://www.ergclay.com/
+logo_image: project logo.png
+preview_image: Project preview.JPG
+category: NFTs
+---
