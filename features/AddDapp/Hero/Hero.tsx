@@ -1,17 +1,4 @@
-import {
-  Stack,
-  Link as CharkaLink,
-  Flex,
-  Box,
-  Heading,
-  Button,
-  Image,
-  Icon,
-  IconProps,
-  Text,
-} from '@chakra-ui/react';
-import Link from 'next/link';
-import { FaGithub } from 'react-icons/fa';
+import { Stack, Flex, Box, Heading, Image, Icon, IconProps } from '@chakra-ui/react';
 
 export default function Hero() {
   return (
@@ -21,7 +8,7 @@ export default function Hero() {
         spacing={{ base: 2, md: 10 }}
         direction={{ base: 'column', md: 'row' }}
       >
-        <Stack flex={1} spacing={{ base: 3 }} pt={{ base: 4, md: 14 }}>
+        <Stack flex={1} spacing={{ base: 5 }} pt={{ base: 4, md: 40 }}>
           <Heading
             fontWeight={700}
             fontSize="18px"
@@ -32,59 +19,15 @@ export default function Hero() {
             Become a part of our community
           </Heading>
           <Stack spacing={{ base: 8, md: 10 }}>
-            <Stack spacing={{ base: 8, md: 6 }}>
-              <Heading
-                lineHeight={1.2}
-                fontWeight={700}
-                fontSize={{ base: '5xl', lg: '64px' }}
-                textAlign={{ base: 'center', md: 'initial' }}
-                mt={0}
-              >
-                Add your dApp
-              </Heading>
-              <Text
-                fontSize={{ base: 'md', md: 'lg' }}
-                color="whiteAlpha.700"
-                textAlign={{ base: 'center', md: 'left' }}
-              >
-                We have a step-by-step guide for non tech-savvy users of how to do the dapp
-                submition. Just user follow the instructions down below. It's really simple. Pro
-                users can jump directly to Sigmaverse's Github repo.
-              </Text>
-            </Stack>
-            <Stack
-              spacing={{ base: 4, sm: 6 }}
-              direction={{ base: 'column', md: 'row' }}
-              display="flex"
-              justifyContent={{ base: 'center', md: 'flex-start' }}
-              align={{ base: 'center', md: 'flex-start' }}
+            <Heading
+              lineHeight={1.2}
+              fontWeight={700}
+              fontSize={{ base: '5xl', lg: '64px' }}
+              textAlign={{ base: 'center', md: 'initial' }}
+              mt={0}
             >
-              <Link href="/all-projects">
-                <Button
-                  size={'lg'}
-                  color="black"
-                  bg="white"
-                  colorScheme={'white'}
-                  fontWeight={'600'}
-                  px={6}
-                >
-                  Browse All Projects
-                </Button>
-              </Link>
-              <Button
-                as="a"
-                href="https://github.com/ergoplatform/sigmaverse"
-                target="_blank"
-                size={'lg'}
-                colorScheme="white"
-                variant="outline"
-                fontWeight={'600'}
-                px={6}
-                leftIcon={<FaGithub />}
-              >
-                Jump to Github
-              </Button>
-            </Stack>
+              Add your dApp
+            </Heading>
           </Stack>
         </Stack>
         <Flex

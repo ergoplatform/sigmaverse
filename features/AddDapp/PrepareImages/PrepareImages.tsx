@@ -11,7 +11,6 @@ const PrepareImages = () => {
       display={{ base: 'flex', md: 'flex' }}
     >
       <Stack spacing={4} align={'center'} textAlign={{ base: 'center', md: 'left' }}>
-        <img src="/images/ArrowDown.svg" alt="Logo Image" />
         <Heading textAlign={'center'} fontSize={'5xl'} maxWidth={'700px'}>
           Prepare Images
         </Heading>
