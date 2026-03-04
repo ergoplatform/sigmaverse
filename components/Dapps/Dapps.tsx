@@ -9,7 +9,7 @@ export default function Dapps({ projects, size, setSize }: any) {
   );
 
   return (
-    <div style={{ paddingBottom: '300px' }}>
+    <div style={{ paddingBottom: '150px' }}>
       <InfiniteScroll
         dataLength={transformedData.length}
         next={() => setSize(size + 1)}
