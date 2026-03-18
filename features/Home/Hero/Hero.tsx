@@ -1,4 +1,4 @@
-import { Stack, Flex, Box, Heading, Button, Image, Icon, IconProps } from '@chakra-ui/react';
+import { Stack, Flex, Box, Heading, Button, Image, Icon, IconProps, Link as ChakraLink } from '@chakra-ui/react';
 import Link from 'next/link';
 import { FaPlus } from 'react-icons/fa';
 
@@ -70,7 +70,11 @@ export default function Hero() {
                   Browse All Projects
                 </Button>
               </Link>
-              <Link href="/add-dapp">
+              <ChakraLink
+                href="https://github.com/ergoplatform/sigmaverse/issues/new?template=add-request.md&title=Add%20%7BPROJECT%7D"
+                isExternal
+                _hover={{ textDecoration: 'none' }}
+              >
                 <Button
                   size={'lg'}
                   colorScheme="white"
@@ -81,7 +85,7 @@ export default function Hero() {
                 >
                   Add your dApp
                 </Button>
-              </Link>
+              </ChakraLink>
             </Stack>
           </Stack>
         </Stack>

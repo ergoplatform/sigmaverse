@@ -2,13 +2,13 @@ import {
   Box,
   chakra,
   Container,
-  Link,
   Stack,
   Text,
   useColorModeValue,
   VisuallyHidden,
 } from '@chakra-ui/react';
 import { FaTwitter } from 'react-icons/fa';
+import { FaGithub } from 'react-icons/fa';
 import { ReactNode } from 'react';
 
 const Logo = () => {
@@ -52,11 +52,6 @@ export default function Footer() {
     <Box>
       <Container as={Stack} maxW={'6xl'} py={4} spacing={4} justify={'center'} align={'center'}>
         <Logo />
-        <Stack direction={'row'} spacing={6}>
-          <Link href={'/'}>Home</Link>
-          <Link href={'/all-projects'}>Browse Projects</Link>
-          <Link href={'/add-dapp'}>Add your dApp</Link>
-        </Stack>
       </Container>
 
       <Box borderTopWidth={1} borderStyle={'solid'} borderColor={'white'}>
@@ -73,6 +68,9 @@ export default function Footer() {
           <Stack direction={'row'} spacing={6}>
             <SocialButton label={'Twitter'} href={'https://mobile.twitter.com/sigmaverse_ergo'}>
               <FaTwitter />
+            </SocialButton>
+            <SocialButton label={'Github'} href={'https://github.com/ergoplatform/sigmaverse'}>
+              <FaGithub />
             </SocialButton>
           </Stack>
         </Container>

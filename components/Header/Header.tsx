@@ -42,7 +42,11 @@ export default function Header() {
           </Flex>
 
           <Stack flex={{ base: 1, md: 0 }} justify={'flex-end'} direction={'row'} spacing={6}>
-            <Link href={'/add-dapp'}>
+            <ChakraLink
+              href="https://github.com/ergoplatform/sigmaverse/issues/new?template=add-request.md&title=Add%20%7BPROJECT%7D"
+              isExternal
+              _hover={{ textDecoration: 'none' }}
+            >
               <Button
                 display={{ base: 'none', md: 'inline-flex' }}
                 fontSize={'sm'}
@@ -56,7 +60,7 @@ export default function Header() {
               >
                 Add your dApp
               </Button>
-            </Link>
+            </ChakraLink>
           </Stack>
         </Flex>
       </Box>

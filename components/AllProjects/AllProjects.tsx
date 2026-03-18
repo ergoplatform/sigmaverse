@@ -49,19 +49,19 @@ export const AllProjectsPageContent = () => {
 
   return (
     <div>
-      <Box pt={{ base: 20 }} pb={{ base: 12 }} display="flex" justifyContent="center">
+      <Box pt={{ base: 10 }} pb={{ base: 10 }} display="flex" justifyContent="center">
         <Stack spacing={{ base: 8 }}>
-          <Heading fontSize={{ base: '4xl' }}>Explore the universe of Sigmaverse</Heading>
+          <Heading fontSize={{ base: '2xl', md: '4xl' }}>Explore the Sigmaverse</Heading>
 
           <Box display="flex" justifyContent="center">
-            <InputGroup w={{ base: '100%', md: '70%' }}>
+            <InputGroup w={{ base: '100%', md: '85%' }}>
               <InputLeftElement pointerEvents="none" children={<SearchIcon color="gray.300" />} />
               <Input
                 onChange={({ target: { value } }) => onChangeSearch(value)}
                 variant="filled"
                 bg="whiteAlpha.200"
                 type="text"
-                placeholder="Seach the dApp..."
+                placeholder="Search Projects..."
                 _placeholder={{ opacity: 1, color: 'whiteAlpha.700' }}
                 value={searchedValue}
               />
